@@ -15,7 +15,7 @@ class MangaHorizontalList extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         padding: const EdgeInsets.symmetric(horizontal: 16),
         itemBuilder: (_, index) => MangaCard(manga: mangas[index]),
-        separatorBuilder: (_, __) => const SizedBox(width: 12),
+        separatorBuilder: (_, _) => const SizedBox(width: 12),
         itemCount: mangas.length,
       ),
     );

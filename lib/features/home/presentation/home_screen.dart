@@ -1,13 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:startup_launch/core/di/service_locator.dart';
 import 'package:startup_launch/core/extensions/l10n.dart';
 import 'package:startup_launch/features/home/presentation/bloc/home_bloc.dart';
 import 'package:startup_launch/features/home/presentation/bloc/home_event.dart';
 import 'package:startup_launch/features/home/presentation/bloc/home_state.dart';
 import 'package:startup_launch/features/home/presentation/widgets/home_error.dart';
-import 'package:startup_launch/features/home/presentation/widgets/home_header.dart';
 import 'package:startup_launch/features/home/presentation/widgets/home_loading.dart';
 import 'package:startup_launch/features/home/presentation/widgets/home_section.dart';
 import 'package:startup_launch/features/manga/domain/entities/manga.dart';
