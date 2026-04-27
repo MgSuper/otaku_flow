@@ -17,6 +17,7 @@ Future<void> bootstrap(Environment env) async {
   final config = AppConfig.from(env);
 
   await setupLocator(config);
+  await sl.allReady();
 
   await sl<LocaleCubit>().init();
 

@@ -6,17 +6,18 @@ abstract interface class OnboardingStorage {
 }
 
 class SharedPrefsOnboardingStorage implements OnboardingStorage {
+  final SharedPreferences _prefs;
   static const _key = 'onboarding_completed';
+
+  SharedPrefsOnboardingStorage(this._prefs);
 
   @override
   Future<bool> isCompleted() async {
-    final prefs = await SharedPreferences.getInstance();
-    return prefs.getBool(_key) ?? false;
+    return _prefs.getBool(_key) ?? false;
   }
 
   @override
   Future<void> setCompleted() async {
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.setBool(_key, true);
+    await _prefs.setBool(_key, true);
   }
 }

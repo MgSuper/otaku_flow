@@ -3,10 +3,15 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:startup_launch/app/routes/app_routes.dart';
 import 'package:startup_launch/core/di/service_locator.dart';
+import 'package:startup_launch/features/home/presentation/bloc/home_bloc.dart';
+import 'package:startup_launch/features/home/presentation/bloc/home_event.dart';
 import 'package:startup_launch/features/home/presentation/home_screen.dart';
 import 'package:startup_launch/features/onboarding/data/onboarding_storage.dart';
 import 'package:startup_launch/features/onboarding/presentation/cubit/onboarding_cubit.dart';
 import 'package:startup_launch/features/onboarding/presentation/onboarding_screen.dart';
+import 'package:startup_launch/features/search/presentation/bloc/search_bloc.dart';
+import 'package:startup_launch/features/search/presentation/bloc/search_event.dart';
+import 'package:startup_launch/features/search/presentation/screens/search_screen.dart';
 import 'package:startup_launch/features/settings/presentation/screens/settings_screen.dart';
 
 class AppRouter {
@@ -18,22 +23,39 @@ class AppRouter {
       routes: <RouteBase>[
         GoRoute(
           path: AppRoutes.onboarding,
-          pageBuilder: (context, state) => MaterialPage(
-            child: BlocProvider(
+          builder: (context, state) {
+            return BlocProvider(
               create: (_) => OnboardingCubit(storage: sl<OnboardingStorage>()),
               child: const OnboardingScreen(),
-            ),
-          ),
+            );
+          },
         ),
+
         GoRoute(
           path: AppRoutes.home,
-          pageBuilder: (context, state) =>
-              const MaterialPage(child: HomeScreen()),
+          builder: (context, state) {
+            return BlocProvider(
+              // The Bloc is created at the Router level
+              create: (_) => sl<HomeBloc>()..add(LoadHome()),
+              child: const HomeScreen(),
+            );
+          },
         ),
+
         GoRoute(
           path: AppRoutes.settings,
-          pageBuilder: (context, state) =>
-              const MaterialPage(child: SettingsPage()),
+          builder: (context, state) {
+            return SettingsPage();
+          },
+        ),
+        GoRoute(
+          path: AppRoutes.search,
+          builder: (context, state) {
+            return BlocProvider(
+              create: (context) => sl<SearchBloc>(),
+              child: const SearchScreen(),
+            );
+          },
         ),
       ],
       errorBuilder: (context, state) => _ErrorScreen(error: state.error),

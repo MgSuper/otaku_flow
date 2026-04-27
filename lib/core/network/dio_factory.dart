@@ -7,7 +7,7 @@ class DioFactory {
   static Dio create() {
     final dio = Dio(
       BaseOptions(
-        baseUrl: 'https://api.startup.com',
+        baseUrl: 'https://api.mangadex.org',
         connectTimeout: const Duration(seconds: 20),
         receiveTimeout: const Duration(seconds: 20),
         sendTimeout: const Duration(seconds: 20),

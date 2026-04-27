@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "com.trl.startup_launch"
+    namespace = "com.sptrl.otaku_flow"
     compileSdk = flutter.compileSdkVersion
     ndkVersion = flutter.ndkVersion
 
@@ -42,7 +42,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.trl.startup_launch"
+        applicationId = "com.sptrl.otaku_flow"
         minSdk = flutter.minSdkVersion
         targetSdk = flutter.targetSdkVersion
         versionCode = flutter.versionCode

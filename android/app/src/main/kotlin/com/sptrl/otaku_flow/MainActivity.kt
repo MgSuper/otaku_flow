@@ -1,4 +1,4 @@
-package com.trl.startup_launch
+package com.sptrl.otaku_flow
 
 import io.flutter.embedding.android.FlutterActivity
 
