@@ -10,7 +10,6 @@ import 'package:startup_launch/features/onboarding/data/onboarding_storage.dart'
 import 'package:startup_launch/features/onboarding/presentation/cubit/onboarding_cubit.dart';
 import 'package:startup_launch/features/onboarding/presentation/onboarding_screen.dart';
 import 'package:startup_launch/features/search/presentation/bloc/search_bloc.dart';
-import 'package:startup_launch/features/search/presentation/bloc/search_event.dart';
 import 'package:startup_launch/features/search/presentation/screens/search_screen.dart';
 import 'package:startup_launch/features/settings/presentation/screens/settings_screen.dart';
 

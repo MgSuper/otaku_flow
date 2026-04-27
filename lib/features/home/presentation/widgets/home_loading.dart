@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:skeletonizer/skeletonizer.dart';
-import 'package:startup_launch/features/home/presentation/widgets/home_header.dart';
 
 class HomeLoadingView extends StatelessWidget {
   const HomeLoadingView({super.key});

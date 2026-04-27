@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:startup_launch/core/di/service_locator.dart';
 import 'package:startup_launch/features/search/presentation/bloc/search_bloc.dart';
 import 'package:startup_launch/features/search/presentation/bloc/search_event.dart';
 import 'package:startup_launch/features/search/presentation/bloc/search_state.dart';
@@ -82,8 +81,8 @@ class _SearchScreenState extends State<SearchScreen> {
                                       color: Colors.white,
                                       fontSize: 12,
                                     ),
-                                    backgroundColor: Colors.white.withOpacity(
-                                      0.1,
+                                    backgroundColor: Colors.white.withAlpha(
+                                      2,
                                     ), // Subtle dark theme feel
                                     deleteIcon: const Icon(
                                       Icons.close,
@@ -93,7 +92,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                     shape: RoundedRectangleBorder(
                                       borderRadius: BorderRadius.circular(8),
                                       side: BorderSide(
-                                        color: Colors.white.withOpacity(0.2),
+                                        color: Colors.white.withAlpha(2),
                                       ),
                                     ),
                                     onPressed: () => context
