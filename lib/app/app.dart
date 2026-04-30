@@ -7,6 +7,7 @@ import 'package:startup_launch/app/theme/app_theme.dart';
 import 'package:startup_launch/app/theme/theme_cubit.dart';
 import 'package:startup_launch/core/config/app_config.dart';
 import 'package:startup_launch/core/di/service_locator.dart';
+import 'package:startup_launch/features/reader_progress/presentation/cubit/reading_progress_cubit.dart';
 import 'package:startup_launch/l10n/generated/app_localizations.dart';
 
 class App extends StatelessWidget {
@@ -24,6 +25,7 @@ class App extends StatelessWidget {
       providers: [
         BlocProvider.value(value: sl<ThemeCubit>()),
         BlocProvider.value(value: sl<LocaleCubit>()),
+        BlocProvider(create: (_) => sl<ReadingProgressCubit>()),
       ],
       child: BlocBuilder<ThemeCubit, ThemeMode>(
         builder: (context, mode) {
@@ -39,6 +41,7 @@ class App extends StatelessWidget {
                 locale: locale,
                 supportedLocales: AppLocalizations.supportedLocales,
                 localizationsDelegates: AppLocalizations.localizationsDelegates,
+
                 builder: (context, child) {
                   if (!config.isProd) {
                     return Banner(

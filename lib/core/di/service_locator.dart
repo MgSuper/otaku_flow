@@ -11,7 +11,21 @@ import 'package:startup_launch/features/home/data/repositories/home_repository_i
 import 'package:startup_launch/features/home/domain/repositories/home_repository.dart';
 import 'package:startup_launch/features/home/domain/usecases/get_home_usecase.dart';
 import 'package:startup_launch/features/home/presentation/bloc/home_bloc.dart';
+import 'package:startup_launch/features/manga_detail/data/datasource/manga_detail_remote_data_source.dart';
+import 'package:startup_launch/features/manga_detail/data/datasource/manga_detail_remote_data_source_impl.dart';
+import 'package:startup_launch/features/manga_detail/data/repositories/manga_detail_repository_impl.dart';
+import 'package:startup_launch/features/manga_detail/domain/repositories/manga_detail_repository.dart';
+import 'package:startup_launch/features/manga_detail/domain/usecases/get_manga_detail_usecase.dart';
+import 'package:startup_launch/features/manga_detail/presentation/bloc/manga_detail_bloc.dart';
 import 'package:startup_launch/features/onboarding/data/onboarding_storage.dart';
+import 'package:startup_launch/features/reader/data/datasource/reader_remote_data_source.dart';
+import 'package:startup_launch/features/reader/data/datasource/reader_remote_data_source_impl.dart';
+import 'package:startup_launch/features/reader/data/repositories/reader_repository_impl.dart';
+import 'package:startup_launch/features/reader/domain/repositories/reader_repository.dart';
+import 'package:startup_launch/features/reader/domain/usecases/get_reader_chapter_usecase.dart';
+import 'package:startup_launch/features/reader/presentation/bloc/reader_bloc.dart';
+import 'package:startup_launch/features/reader_progress/data/reading_progress_storage.dart';
+import 'package:startup_launch/features/reader_progress/presentation/cubit/reading_progress_cubit.dart';
 import 'package:startup_launch/features/search/data/datasource/onboarding_storage.dart';
 import 'package:startup_launch/features/search/data/datasource/search_remote_data_source.dart';
 import 'package:startup_launch/features/search/data/datasource/search_remote_data_source_impl.dart';
@@ -67,4 +81,30 @@ Future<void> setupLocator(AppConfig config) async {
   );
 
   sl.registerFactory(() => SearchBloc(sl(), sl()));
+
+  sl.registerLazySingleton<MangaDetailRemoteDataSource>(
+    () => MangaDetailRemoteDataSourceImpl(sl()),
+  );
+
+  sl.registerLazySingleton<MangaDetailRepository>(
+    () => MangaDetailRepositoryImpl(sl()),
+  );
+
+  sl.registerLazySingleton(() => GetMangaDetailUseCase(sl()));
+
+  sl.registerFactory(() => MangaDetailBloc(sl()));
+
+  sl.registerLazySingleton<ReaderRemoteDataSource>(
+    () => ReaderRemoteDataSourceImpl(sl()),
+  );
+
+  sl.registerLazySingleton<ReaderRepository>(() => ReaderRepositoryImpl(sl()));
+
+  sl.registerLazySingleton(() => GetReaderChapterUseCase(sl()));
+
+  sl.registerFactory(() => ReaderBloc(sl()));
+
+  sl.registerLazySingleton(() => ReadingProgressStorage(sl()));
+
+  sl.registerLazySingleton(() => ReadingProgressCubit(sl())..load());
 }
