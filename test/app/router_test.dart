@@ -57,7 +57,7 @@ void main() {
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 500));
 
-    expect(find.text('Home'), findsOneWidget);
+    expect(find.text('Library'), findsOneWidget);
   });
 
   testWidgets('go to settings works', (tester) async {

@@ -44,35 +44,35 @@
   "@getStarted": {
     "description": "Label for onboarding getStarted"
   },
-  "onboardingTitle1": "Launch ideas faster",
+  "onboardingTitle1": "Discover manga instantly",
   "@onboardingTitle1": {
     "description": "Label for onboarding title 1"
   },
-  "onboardingDesc1": "Start your next Flutter app with production-ready architecture, themes, routing, and localization already setup.",
+  "onboardingDesc1": "Browse trending manga, latest updates, popular series, and genres in one place.",
   "@onboardingDesc1": {
     "description": "Label for onboarding title 1 description"
   },
-  "onboardingTitle2": "Built for serious startups",
+  "onboardingTitle2": "Built for real readers",
   "@onboardingTitle2": {
     "description": "Label for onboarding title 2"
   },
-  "onboardingDesc2": "Use clean structure, scalable state management, networking, and CI/CD from day one.",
+  "onboardingDesc2": "Enjoy smooth vertical reading, fast loading pages, and a clean reading experience.",
   "@onboardingDesc2": {
     "description": "Label for onboarding title 2 description"
   },
-  "onboardingTitle3": "Save weeks of setup",
+  "onboardingTitle3": "Continue anytime",
   "@onboardingTitle3": {
     "description": "Label for onboarding title 3"
   },
-  "onboardingDesc3": "No more repeating flavors, rename configs, tests, icons, or boilerplate every new project.",
+  "onboardingDesc3": "Your reading progress is saved automatically so you can resume exactly where you stopped.",
   "@onboardingDesc3": {
     "description": "Label for onboarding title 3 description"
   },
-  "onboardingTitle4": "Build. Launch. Grow.",
+  "onboardingTitle4": "Save your favorites",
   "@onboardingTitle4": {
     "description": "Label for onboarding title 4"
   },
-  "onboardingDesc4": "Focus on solving real problems and shipping products faster with Startup Launch.",
+  "onboardingDesc4": "Build your personal manga library with favorites, history, and more features coming soon.",
   "@onboardingDesc4": {
     "description": "Label for onboarding title 4 description"
   },
