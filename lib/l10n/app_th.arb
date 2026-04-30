@@ -44,36 +44,136 @@
   "@getStarted": {
     "description": "Label for onboarding getStarted"
   },
-  "onboardingTitle1": "เปิดตัวไอเดียได้เร็วขึ้น",
+  "onboardingTitle1": "ค้นพบมังงะได้ทันที",
   "@onboardingTitle1": {
     "description": "Label for onboarding title 1"
   },
-  "onboardingDesc1": "เริ่มแอป Flutter ตัวถัดไปด้วยโครงสร้างพร้อมใช้งานจริง ระบบธีม เส้นทาง และหลายภาษาที่ตั้งค่าไว้แล้ว",
+  "onboardingDesc1": "ค้นหามังงะยอดนิยม อัปเดตล่าสุด ซีรีส์ฮิต และหมวดหมู่ได้ในที่เดียว",
   "@onboardingDesc1": {
     "description": "Label for onboarding title 1 description"
   },
-  "onboardingTitle2": "สร้างมาเพื่อสตาร์ทอัพจริงจัง",
+  "onboardingTitle2": "สร้างมาเพื่อผู้อ่านตัวจริง",
   "@onboardingTitle2": {
     "description": "Label for onboarding title 2"
   },
-  "onboardingDesc2": "ใช้โครงสร้างที่เป็นระเบียบ การจัดการสถานะที่ขยายได้ ระบบเครือข่าย และ CI/CD ตั้งแต่วันแรก",
+  "onboardingDesc2": "เพลิดเพลินกับการอ่านแนวตั้งลื่นไหล โหลดไว และประสบการณ์อ่านที่สะอาดตา",
   "@onboardingDesc2": {
     "description": "Label for onboarding title 2 description"
   },
-  "onboardingTitle3": "ประหยัดเวลาหลายสัปดาห์",
+  "onboardingTitle3": "อ่านต่อได้ทุกเวลา",
   "@onboardingTitle3": {
     "description": "Label for onboarding title 3"
   },
-  "onboardingDesc3": "ไม่ต้องทำซ้ำเรื่อง flavors การเปลี่ยนชื่อแอป tests icons หรือ boilerplate ทุกครั้งที่เริ่มโปรเจกต์ใหม่",
+  "onboardingDesc3": "บันทึกความคืบหน้าอัตโนมัติ เพื่อกลับมาอ่านต่อจากจุดเดิมได้ทันที",
   "@onboardingDesc3": {
     "description": "Label for onboarding title 3 description"
   },
-  "onboardingTitle4": "สร้าง เปิดตัว เติบโต",
+  "onboardingTitle4": "บันทึกเรื่องโปรดของคุณ",
   "@onboardingTitle4": {
     "description": "Label for onboarding title 4"
   },
-  "onboardingDesc4": "โฟกัสกับการแก้ปัญหาจริง และปล่อยโปรดักต์ได้เร็วขึ้นด้วย Startup Launch",
+  "onboardingDesc4": "สร้างคลังมังงะส่วนตัวด้วยรายการโปรด ประวัติการอ่าน และฟีเจอร์ใหม่ที่กำลังมา",
   "@onboardingDesc4": {
     "description": "Label for onboarding title 4 description"
+  },
+  "library": "คลังหนังสือ",
+  "@library": {
+    "description": "Label for library screen title"
+  },
+  "trending": "มาแรง",
+  "@trending": {
+    "description": "Home section title for trending manga"
+  },
+  "latest": "ล่าสุด",
+  "@latest": {
+    "description": "Home section title for latest updated manga"
+  },
+  "popular": "ยอดนิยม",
+  "@popular": {
+    "description": "Home section title for popular manga"
+  },
+  "searchMangaHint": "ค้นหามังงะ ...",
+  "@searchMangaHint": {
+    "description": "Placeholder text in manga search field"
+  },
+  "searchManga": "ค้นหามังงะ",
+  "@searchManga": {
+    "description": "Search manga screen title"
+  },
+  "mangaNotFound": "ไม่พบมังงะ",
+  "@mangaNotFound": {
+    "description": "Message when no manga search result found"
+  },
+  "clearAndTryAgain": "ล้างและลองใหม่",
+  "@clearAndTryAgain": {
+    "description": "Action text when search returns no result"
+  },
+  "manga": "มังงะ",
+  "@manga": {
+    "description": "General label for manga items"
+  },
+  "loaded": "โหลดแล้ว",
+  "@loaded": {
+    "description": "Status label indicating content loaded"
+  },
+  "pages": "หน้า",
+  "@pages": {
+    "description": "Plural label for pages"
+  },
+  "summary": "สรุป",
+  "@summary": {
+    "description": "Section title for manga summary"
+  },
+  "page": "หน้า",
+  "@page": {
+    "description": "Singular label for page"
+  },
+  "chapters": "ตอน",
+  "@chapters": {
+    "description": "Plural label for chapter section"
+  },
+  "chapter": "ตอน",
+  "@chapter": {
+    "description": "Singular label for chapter"
+  },
+  "favorites": "รายการโปรด",
+  "@favorites": {
+    "description": "Label for favorite manga section"
+  },
+  "continueReading": "อ่านต่อ",
+  "@continueReading": {
+    "description": "Label for continue reading section"
+  },
+  "noFavoritesYet": "ยังไม่มีรายการโปรด",
+  "@noFavoritesYet": {
+    "description": "Message shown when user has no favorite manga yet"
+  },
+  "navigationError": "ข้อผิดพลาดในการนำทาง",
+  "@navigationError": {
+    "description": "Title shown on routing error screen"
+  },
+  "unknownRoutingError": "ข้อผิดพลาดเส้นทางที่ไม่ทราบสาเหตุ",
+  "@unknownRoutingError": {
+    "description": "Fallback message when route error is unknown"
+  },
+  "retry": "ลองอีกครั้ง",
+  "@retry": {
+    "description": "Generic retry button label"
+  },
+  "chapterUnavailable": "ตอนนี้ไม่พร้อมใช้งาน",
+  "@chapterUnavailable": {
+    "description": "Title shown when selected chapter cannot be loaded"
+  },
+  "tryNextAvailable": "ลองตอนถัดไปที่ใช้ได้",
+  "@tryNextAvailable": {
+    "description": "Button label to open the next available chapter"
+  },
+  "tryPrevious": "ลองตอนก่อนหน้า",
+  "@tryPrevious": {
+    "description": "Button label to open the previous available chapter"
+  },
+  "backToChapters": "กลับไปยังรายการตอน",
+  "@backToChapters": {
+    "description": "Button label to return to chapter list"
   }
 }

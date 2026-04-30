@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:startup_launch/core/extensions/l10n.dart';
 import 'package:startup_launch/features/reader/presentation/bloc/reader_bloc.dart';
 import 'package:startup_launch/features/reader/presentation/bloc/reader_event.dart';
 import 'package:startup_launch/features/reader/presentation/bloc/reader_state.dart';
@@ -33,8 +34,8 @@ class ReaderUnavailableView extends StatelessWidget {
 
             const SizedBox(height: 20),
 
-            const Text(
-              'Chapter Unavailable',
+            Text(
+              context.l10n.chapterUnavailable,
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
 
@@ -62,7 +63,7 @@ class ReaderUnavailableView extends StatelessWidget {
                     );
                   },
                   icon: const Icon(Icons.skip_next),
-                  label: const Text('Try Next Available'),
+                  label: Text(context.l10n.tryNextAvailable),
                 ),
               ),
 
@@ -86,7 +87,7 @@ class ReaderUnavailableView extends StatelessWidget {
                     );
                   },
                   icon: const Icon(Icons.skip_previous),
-                  label: const Text('Try Previous'),
+                  label: Text(context.l10n.tryPrevious),
                 ),
               ),
 
@@ -97,7 +98,7 @@ class ReaderUnavailableView extends StatelessWidget {
                 Navigator.pop(context);
               },
               icon: const Icon(Icons.layers_outlined),
-              label: const Text('Back to Chapters'),
+              label: Text(context.l10n.backToChapters),
             ),
           ],
         ),

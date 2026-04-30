@@ -6,6 +6,7 @@ import 'package:startup_launch/core/di/service_locator.dart';
 import 'package:startup_launch/features/home/presentation/bloc/home_bloc.dart';
 import 'package:startup_launch/features/home/presentation/bloc/home_event.dart';
 import 'package:startup_launch/features/home/presentation/home_screen.dart';
+import 'package:startup_launch/features/library/presentation/screens/library_screen.dart';
 import 'package:startup_launch/features/manga_detail/presentation/bloc/manga_detail_bloc.dart';
 import 'package:startup_launch/features/manga_detail/presentation/bloc/manga_detail_event.dart';
 import 'package:startup_launch/features/manga_detail/presentation/screens/manga_detail_screen.dart';
@@ -141,6 +142,7 @@ class AppRouter {
             );
           },
         ),
+        GoRoute(path: '/library', builder: (_, _) => const LibraryScreen()),
       ],
       errorBuilder: (context, state) => _ErrorScreen(error: state.error),
     );

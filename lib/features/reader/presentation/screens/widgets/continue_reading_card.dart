@@ -28,7 +28,6 @@ class ContinueReadingCard extends StatelessWidget {
             // Note: If your progress doesn't have .page yet, you'll need to add it
             // to your ReadingProgress entity/model.
             final targetPage = progress.page;
-            debugPrint('Continue Reading Page: $targetPage');
 
             final result = await sl<GetMangaDetailUseCase>().call(
               mangaId: progress.mangaId,

@@ -75,5 +75,105 @@
   "onboardingDesc4": "Focus on solving real problems and shipping products faster with Startup Launch.",
   "@onboardingDesc4": {
     "description": "Label for onboarding title 4 description"
+  },
+  "library": "Library",
+  "@library": {
+    "description": "Label for library screen title"
+  },
+  "trending": "Trending",
+  "@trending": {
+    "description": "Home section title for trending manga"
+  },
+  "latest": "Latest",
+  "@latest": {
+    "description": "Home section title for latest updated manga"
+  },
+  "popular": "Popular",
+  "@popular": {
+    "description": "Home section title for popular manga"
+  },
+  "searchMangaHint": "Search manga ...",
+  "@searchMangaHint": {
+    "description": "Placeholder text in manga search field"
+  },
+  "searchManga": "Search manga",
+  "@searchManga": {
+    "description": "Search manga screen title"
+  },
+  "mangaNotFound": "Manga not found",
+  "@mangaNotFound": {
+    "description": "Message when no manga search result found"
+  },
+  "clearAndTryAgain": "Clear and try again",
+  "@clearAndTryAgain": {
+    "description": "Action text when search returns no result"
+  },
+  "manga": "Manga",
+  "@manga": {
+    "description": "General label for manga items"
+  },
+  "loaded": "Loaded",
+  "@loaded": {
+    "description": "Status label indicating content loaded"
+  },
+  "pages": "Pages",
+  "@pages": {
+    "description": "Plural label for pages"
+  },
+  "summary": "Summary",
+  "@summary": {
+    "description": "Section title for manga summary"
+  },
+  "page": "Page",
+  "@page": {
+    "description": "Singular label for page"
+  },
+  "chapters": "Chapters",
+  "@chapters": {
+    "description": "Plural label for chapter section"
+  },
+  "chapter": "Chapter",
+  "@chapter": {
+    "description": "Singular label for chapter"
+  },
+  "favorites": "Favorites",
+  "@favorites": {
+    "description": "Label for favorite manga section"
+  },
+  "continueReading": "Continue Reading",
+  "@continueReading": {
+    "description": "Label for continue reading section"
+  },
+  "noFavoritesYet": "No favorites yet",
+  "@noFavoritesYet": {
+    "description": "Message shown when user has no favorite manga yet"
+  },
+  "navigationError": "Navigation error",
+  "@navigationError": {
+    "description": "Title shown on routing error screen"
+  },
+  "unknownRoutingError": "Unknown routing error",
+  "@unknownRoutingError": {
+    "description": "Fallback message when route error is unknown"
+  },
+  "retry": "Retry",
+  "@retry": {
+    "description": "Generic retry button label"
+  },
+  "chapterUnavailable": "Chapter Unavailable",
+  "@chapterUnavailable": {
+    "description": "Title shown when selected chapter cannot be loaded"
+  },
+  "tryNextAvailable": "Try Next Available",
+  "@tryNextAvailable": {
+    "description": "Button label to open the next available chapter"
+  },
+  "tryPrevious": "Try Previous",
+  "@tryPrevious": {
+    "description": "Button label to open the previous available chapter"
+  },
+  "backToChapters": "Back to Chapters",
+  "@backToChapters": {
+    "description": "Button label to return to chapter list"
   }
 }

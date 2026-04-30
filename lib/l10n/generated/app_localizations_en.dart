@@ -68,4 +68,79 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get onboardingDesc4 =>
       'Focus on solving real problems and shipping products faster with Startup Launch.';
+
+  @override
+  String get library => 'Library';
+
+  @override
+  String get trending => 'Trending';
+
+  @override
+  String get latest => 'Latest';
+
+  @override
+  String get popular => 'Popular';
+
+  @override
+  String get searchMangaHint => 'Search manga ...';
+
+  @override
+  String get searchManga => 'Search manga';
+
+  @override
+  String get mangaNotFound => 'Manga not found';
+
+  @override
+  String get clearAndTryAgain => 'Clear and try again';
+
+  @override
+  String get manga => 'Manga';
+
+  @override
+  String get loaded => 'Loaded';
+
+  @override
+  String get pages => 'Pages';
+
+  @override
+  String get summary => 'Summary';
+
+  @override
+  String get page => 'Page';
+
+  @override
+  String get chapters => 'Chapters';
+
+  @override
+  String get chapter => 'Chapter';
+
+  @override
+  String get favorites => 'Favorites';
+
+  @override
+  String get continueReading => 'Continue Reading';
+
+  @override
+  String get noFavoritesYet => 'No favorites yet';
+
+  @override
+  String get navigationError => 'Navigation error';
+
+  @override
+  String get unknownRoutingError => 'Unknown routing error';
+
+  @override
+  String get retry => 'Retry';
+
+  @override
+  String get chapterUnavailable => 'Chapter Unavailable';
+
+  @override
+  String get tryNextAvailable => 'Try Next Available';
+
+  @override
+  String get tryPrevious => 'Try Previous';
+
+  @override
+  String get backToChapters => 'Back to Chapters';
 }

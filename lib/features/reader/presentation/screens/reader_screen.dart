@@ -117,7 +117,6 @@ class _ReaderScreenState extends State<ReaderScreen>
     if (controller.position.maxScrollExtent >= savedOffset) {
       controller.jumpTo(savedOffset);
       restored = true;
-      debugPrint('Scroll Restored to: $savedOffset');
     } else {
       // If the list isn't long enough yet (images still loading/rendering),
       // try again on the next frame.
@@ -128,7 +127,6 @@ class _ReaderScreenState extends State<ReaderScreen>
   void _saveCurrentProgress() {
     final state = readerBloc.state;
     if (state is ReaderLoaded && controller.hasClients) {
-      debugPrint('Saving progress... ${widget.currentPage}');
       sl<ReadingProgressCubit>().save(
         ReadingProgress(
           mangaId: widget.mangaId,

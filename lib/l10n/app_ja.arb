@@ -44,36 +44,136 @@
   "@getStarted": {
     "description": "Label for onboarding getStarted"
   },
-  "onboardingTitle1": "アイデアをより早く公開",
+  "onboardingTitle1": "すぐにマンガを見つけよう",
   "@onboardingTitle1": {
     "description": "Label for onboarding title 1"
   },
-  "onboardingDesc1": "本番対応アーキテクチャ、テーマ、ルーティング、多言語対応付きで次のFlutterアプリを始められます。",
+  "onboardingDesc1": "人気作品、最新更新、話題作、ジャンルをひとつの場所でチェックできます。",
   "@onboardingDesc1": {
     "description": "Label for onboarding title 1 description"
   },
-  "onboardingTitle2": "本気のスタートアップ向け",
+  "onboardingTitle2": "本物の読者のために設計",
   "@onboardingTitle2": {
     "description": "Label for onboarding title 2"
   },
-  "onboardingDesc2": "クリーン構成、拡張しやすい状態管理、ネットワーク、CI/CD を初日から利用できます。",
+  "onboardingDesc2": "快適な縦読み、高速読み込み、シンプルで読みやすい体験を楽しめます。",
   "@onboardingDesc2": {
     "description": "Label for onboarding title 2 description"
   },
-  "onboardingTitle3": "数週間分の設定時間を節約",
+  "onboardingTitle3": "いつでも続きを読む",
   "@onboardingTitle3": {
     "description": "Label for onboarding title 3"
   },
-  "onboardingDesc3": "新規プロジェクトごとに flavor、名前変更、テスト、アイコン、定型コードを繰り返す必要はありません。",
+  "onboardingDesc3": "読書進行状況は自動保存され、途中からすぐ再開できます。",
   "@onboardingDesc3": {
     "description": "Label for onboarding title 3 description"
   },
-  "onboardingTitle4": "作る。公開する。成長する。",
+  "onboardingTitle4": "お気に入りを保存",
   "@onboardingTitle4": {
     "description": "Label for onboarding title 4"
   },
-  "onboardingDesc4": "Startup Launch で本当に重要な課題解決と素早いリリースに集中できます。",
+  "onboardingDesc4": "お気に入りや閲覧履歴で自分だけのマンガライブラリを作れます。今後さらに機能追加予定です。",
   "@onboardingDesc4": {
     "description": "Label for onboarding title 4 description"
+  },
+  "library": "ライブラリ",
+  "@library": {
+    "description": "Label for library screen title"
+  },
+  "trending": "話題作",
+  "@trending": {
+    "description": "Home section title for trending manga"
+  },
+  "latest": "最新",
+  "@latest": {
+    "description": "Home section title for latest updated manga"
+  },
+  "popular": "人気",
+  "@popular": {
+    "description": "Home section title for popular manga"
+  },
+  "searchMangaHint": "マンガを検索 ...",
+  "@searchMangaHint": {
+    "description": "Placeholder text in manga search field"
+  },
+  "searchManga": "マンガを検索",
+  "@searchManga": {
+    "description": "Search manga screen title"
+  },
+  "mangaNotFound": "マンガが見つかりません",
+  "@mangaNotFound": {
+    "description": "Message when no manga search result found"
+  },
+  "clearAndTryAgain": "クリアして再試行",
+  "@clearAndTryAgain": {
+    "description": "Action text when search returns no result"
+  },
+  "manga": "マンガ",
+  "@manga": {
+    "description": "General label for manga items"
+  },
+  "loaded": "読み込み完了",
+  "@loaded": {
+    "description": "Status label indicating content loaded"
+  },
+  "pages": "ページ",
+  "@pages": {
+    "description": "Plural label for pages"
+  },
+  "summary": "概要",
+  "@summary": {
+    "description": "Section title for manga summary"
+  },
+  "page": "ページ",
+  "@page": {
+    "description": "Singular label for page"
+  },
+  "chapters": "チャプター",
+  "@chapters": {
+    "description": "Plural label for chapter section"
+  },
+  "chapter": "チャプター",
+  "@chapter": {
+    "description": "Singular label for chapter"
+  },
+  "favorites": "お気に入り",
+  "@favorites": {
+    "description": "Label for favorite manga section"
+  },
+  "continueReading": "続きを読む",
+  "@continueReading": {
+    "description": "Label for continue reading section"
+  },
+  "noFavoritesYet": "お気に入りはまだありません",
+  "@noFavoritesYet": {
+    "description": "Message shown when user has no favorite manga yet"
+  },
+  "navigationError": "ナビゲーションエラー",
+  "@navigationError": {
+    "description": "Title shown on routing error screen"
+  },
+  "unknownRoutingError": "不明なルーティングエラー",
+  "@unknownRoutingError": {
+    "description": "Fallback message when route error is unknown"
+  },
+  "retry": "再試行",
+  "@retry": {
+    "description": "Generic retry button label"
+  },
+  "chapterUnavailable": "このチャプターは利用できません",
+  "@chapterUnavailable": {
+    "description": "Title shown when selected chapter cannot be loaded"
+  },
+  "tryNextAvailable": "次の利用可能な話へ",
+  "@tryNextAvailable": {
+    "description": "Button label to open the next available chapter"
+  },
+  "tryPrevious": "前の話を試す",
+  "@tryPrevious": {
+    "description": "Button label to open the previous available chapter"
+  },
+  "backToChapters": "チャプター一覧へ戻る",
+  "@backToChapters": {
+    "description": "Button label to return to chapter list"
   }
 }

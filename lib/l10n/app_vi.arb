@@ -44,36 +44,136 @@
   "@getStarted": {
     "description": "Label for onboarding getStarted"
   },
-  "onboardingTitle1": "Ra mắt ý tưởng nhanh hơn",
+  "onboardingTitle1": "Khám phá manga ngay lập tức",
   "@onboardingTitle1": {
     "description": "Label for onboarding title 1"
   },
-  "onboardingDesc1": "Bắt đầu ứng dụng Flutter tiếp theo với kiến trúc production, theme, routing và đa ngôn ngữ đã sẵn sàng.",
+  "onboardingDesc1": "Khám phá manga thịnh hành, cập nhật mới nhất, bộ truyện nổi bật và thể loại tại một nơi.",
   "@onboardingDesc1": {
     "description": "Label for onboarding title 1 description"
   },
-  "onboardingTitle2": "Dành cho startup nghiêm túc",
+  "onboardingTitle2": "Thiết kế cho người đọc thực thụ",
   "@onboardingTitle2": {
     "description": "Label for onboarding title 2"
   },
-  "onboardingDesc2": "Sử dụng cấu trúc sạch, quản lý trạng thái mở rộng tốt, networking và CI/CD ngay từ ngày đầu.",
+  "onboardingDesc2": "Tận hưởng chế độ đọc dọc mượt mà, tải trang nhanh và trải nghiệm đọc sạch sẽ.",
   "@onboardingDesc2": {
     "description": "Label for onboarding title 2 description"
   },
-  "onboardingTitle3": "Tiết kiệm hàng tuần thiết lập",
+  "onboardingTitle3": "Tiếp tục bất cứ lúc nào",
   "@onboardingTitle3": {
     "description": "Label for onboarding title 3"
   },
-  "onboardingDesc3": "Không cần lặp lại flavors, đổi tên app, tests, icons hay boilerplate cho mỗi dự án mới.",
+  "onboardingDesc3": "Tiến trình đọc được lưu tự động để bạn tiếp tục đúng vị trí đã dừng.",
   "@onboardingDesc3": {
     "description": "Label for onboarding title 3 description"
   },
-  "onboardingTitle4": "Xây dựng. Ra mắt. Phát triển.",
+  "onboardingTitle4": "Lưu truyện yêu thích",
   "@onboardingTitle4": {
     "description": "Label for onboarding title 4"
   },
-  "onboardingDesc4": "Tập trung giải quyết vấn đề thật và phát hành sản phẩm nhanh hơn với Startup Launch.",
+  "onboardingDesc4": "Tạo thư viện manga cá nhân với mục yêu thích, lịch sử đọc và nhiều tính năng sắp ra mắt.",
   "@onboardingDesc4": {
     "description": "Label for onboarding title 4 description"
+  },
+  "library": "Thư viện",
+  "@library": {
+    "description": "Label for library screen title"
+  },
+  "trending": "Xu hướng",
+  "@trending": {
+    "description": "Home section title for trending manga"
+  },
+  "latest": "Mới nhất",
+  "@latest": {
+    "description": "Home section title for latest updated manga"
+  },
+  "popular": "Phổ biến",
+  "@popular": {
+    "description": "Home section title for popular manga"
+  },
+  "searchMangaHint": "Tìm manga ...",
+  "@searchMangaHint": {
+    "description": "Placeholder text in manga search field"
+  },
+  "searchManga": "Tìm manga",
+  "@searchManga": {
+    "description": "Search manga screen title"
+  },
+  "mangaNotFound": "Không tìm thấy manga",
+  "@mangaNotFound": {
+    "description": "Message when no manga search result found"
+  },
+  "clearAndTryAgain": "Xóa và thử lại",
+  "@clearAndTryAgain": {
+    "description": "Action text when search returns no result"
+  },
+  "manga": "Manga",
+  "@manga": {
+    "description": "General label for manga items"
+  },
+  "loaded": "Đã tải",
+  "@loaded": {
+    "description": "Status label indicating content loaded"
+  },
+  "pages": "Trang",
+  "@pages": {
+    "description": "Plural label for pages"
+  },
+  "summary": "Tóm tắt",
+  "@summary": {
+    "description": "Section title for manga summary"
+  },
+  "page": "Trang",
+  "@page": {
+    "description": "Singular label for page"
+  },
+  "chapters": "Chương",
+  "@chapters": {
+    "description": "Plural label for chapter section"
+  },
+  "chapter": "Chương",
+  "@chapter": {
+    "description": "Singular label for chapter"
+  },
+  "favorites": "Yêu thích",
+  "@favorites": {
+    "description": "Label for favorite manga section"
+  },
+  "continueReading": "Tiếp tục đọc",
+  "@continueReading": {
+    "description": "Label for continue reading section"
+  },
+  "noFavoritesYet": "Chưa có mục yêu thích",
+  "@noFavoritesYet": {
+    "description": "Message shown when user has no favorite manga yet"
+  },
+  "navigationError": "Lỗi điều hướng",
+  "@navigationError": {
+    "description": "Title shown on routing error screen"
+  },
+  "unknownRoutingError": "Lỗi điều hướng không xác định",
+  "@unknownRoutingError": {
+    "description": "Fallback message when route error is unknown"
+  },
+  "retry": "Thử lại",
+  "@retry": {
+    "description": "Generic retry button label"
+  },
+  "chapterUnavailable": "Chương không khả dụng",
+  "@chapterUnavailable": {
+    "description": "Title shown when selected chapter cannot be loaded"
+  },
+  "tryNextAvailable": "Thử chương kế tiếp",
+  "@tryNextAvailable": {
+    "description": "Button label to open the next available chapter"
+  },
+  "tryPrevious": "Thử chương trước",
+  "@tryPrevious": {
+    "description": "Button label to open the previous available chapter"
+  },
+  "backToChapters": "Quay lại danh sách chương",
+  "@backToChapters": {
+    "description": "Button label to return to chapter list"
   }
 }

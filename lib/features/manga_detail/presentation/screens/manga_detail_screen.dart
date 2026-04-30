@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:skeletonizer/skeletonizer.dart';
+import 'package:startup_launch/core/extensions/l10n.dart';
+import 'package:startup_launch/features/favorites/domain/entities/favorite_manga.dart';
+import 'package:startup_launch/features/favorites/presentation/cubit/favorites_cubit.dart';
 import 'package:startup_launch/features/manga_detail/presentation/bloc/manga_detail_bloc.dart';
 import 'package:startup_launch/features/manga_detail/presentation/bloc/manga_detail_event.dart';
 import 'package:startup_launch/features/manga_detail/presentation/bloc/manga_detail_state.dart';
@@ -13,7 +16,6 @@ class MangaDetailScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    debugPrint('[MangaDetailScreen] 🏁 Initial Load...');
     return Scaffold(
       body: BlocBuilder<MangaDetailBloc, MangaDetailState>(
         builder: (_, state) {
@@ -104,47 +106,53 @@ class MangaDetailScreen extends StatelessWidget {
                     children: [
                       Skeletonizer(
                         enabled: state.loadingChapters,
-                        child: Wrap(
-                          spacing: 8,
-                          runSpacing: 8,
+                        child: Row(
                           children: [
-                            _chip('Manga'),
-                            _chip('${chapters.length} Loaded'),
-                            _chip('${stateLoaded.totalPages} Pages'),
+                            _chip(context.l10n.manga),
+                            const SizedBox(width: 8),
+                            _chip('${chapters.length}  ${context.l10n.loaded}'),
+                            const SizedBox(width: 8),
+                            _chip(
+                              '${stateLoaded.totalPages} ${context.l10n.pages}',
+                            ),
+                            const Spacer(),
+                            BlocBuilder<FavoritesCubit, List<FavoriteManga>>(
+                              builder: (_, state) {
+                                final isFav = context
+                                    .read<FavoritesCubit>()
+                                    .isFavorite(manga.id);
+
+                                return IconButton(
+                                  icon: Icon(
+                                    isFav
+                                        ? Icons.favorite
+                                        : Icons.favorite_border,
+                                    color: isFav ? Colors.red : Colors.grey,
+                                  ),
+                                  onPressed: () {
+                                    context.read<FavoritesCubit>().toggle(
+                                      FavoriteManga(
+                                        id: manga.id,
+                                        title: manga.title,
+                                        coverUrl: manga.coverUrl,
+                                      ),
+                                    );
+                                  },
+                                );
+                              },
+                            ),
                           ],
                         ),
                       ),
 
                       const SizedBox(height: 16),
 
-                      Skeletonizer(
-                        enabled: state.loadingChapters,
-                        child: Row(
-                          children: [
-                            Expanded(
-                              child: ElevatedButton.icon(
-                                onPressed: () {},
-                                icon: const Icon(Icons.play_arrow),
-                                label: const Text('Read'),
-                              ),
-                            ),
-
-                            const SizedBox(width: 12),
-
-                            IconButton(
-                              onPressed: () {},
-                              icon: const Icon(Icons.favorite_border),
-                            ),
-                          ],
-                        ),
-                      ),
-
                       const SizedBox(height: 20),
 
                       Skeletonizer(
                         enabled: state.loadingChapters,
-                        child: const Text(
-                          'Summary',
+                        child: Text(
+                          context.l10n.summary,
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.bold,
@@ -170,8 +178,8 @@ class MangaDetailScreen extends StatelessWidget {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            const Text(
-                              'Chapters',
+                            Text(
+                              context.l10n.chapters,
                               style: TextStyle(
                                 fontSize: 18,
                                 fontWeight: FontWeight.bold,
@@ -179,7 +187,7 @@ class MangaDetailScreen extends StatelessWidget {
                             ),
 
                             Text(
-                              'Page ${state.currentPage}/${stateLoaded.totalPages}',
+                              '${context.l10n.page} ${state.currentPage}/${stateLoaded.totalPages}',
                             ),
                           ],
                         ),
@@ -220,7 +228,7 @@ class MangaDetailScreen extends StatelessWidget {
                         onTap: () async {
                           _openReader(context, c, index, stateLoaded);
                         },
-                        title: Text('Chapter ${c.chapter}'),
+                        title: Text('${context.l10n.chapter} ${c.chapter}'),
                         subtitle: Text(c.title),
                         trailing: const Icon(Icons.chevron_right),
                       ),
@@ -271,7 +279,6 @@ class MangaDetailScreen extends StatelessWidget {
     int index,
     MangaDetailLoaded state,
   ) async {
-    debugPrint('state.currentPage ${state.currentPage}');
     final result = await context.push(
       '/reader/${chapter.id}',
       extra: {

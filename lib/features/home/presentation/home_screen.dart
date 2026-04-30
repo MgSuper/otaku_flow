@@ -8,6 +8,7 @@ import 'package:startup_launch/features/home/presentation/bloc/home_state.dart';
 import 'package:startup_launch/features/home/presentation/widgets/home_error.dart';
 import 'package:startup_launch/features/home/presentation/widgets/home_loading.dart';
 import 'package:startup_launch/features/home/presentation/widgets/home_section.dart';
+import 'package:startup_launch/features/home/presentation/widgets/quick_actions.dart';
 import 'package:startup_launch/features/manga/domain/entities/manga.dart';
 import 'package:startup_launch/features/reader/presentation/screens/widgets/continue_reading_card.dart';
 import 'package:startup_launch/features/reader_progress/presentation/cubit/reading_progress_cubit.dart';
@@ -31,7 +32,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: false,
-        title: Text(context.l10n.homeTitle),
+        title: Text(context.l10n.library),
         actions: [
           IconButton(
             onPressed: () {
@@ -64,12 +65,36 @@ class HomeScreen extends StatelessWidget {
                         return const SizedBox();
                       }
 
-                      return ContinueReadingCard(progress: progress);
+                      return Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            context.l10n.continueReading,
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+
+                          const SizedBox(height: 8),
+
+                          ContinueReadingCard(progress: progress),
+                        ],
+                      );
                     },
                   ),
-                  HomeSection(title: 'Trending', mangas: state.data.trending),
-                  HomeSection(title: 'Latest', mangas: state.data.latest),
-                  HomeSection(title: 'Popular', mangas: state.data.popular),
+                  HomeSection(
+                    title: context.l10n.trending,
+                    mangas: state.data.trending,
+                  ),
+                  HomeSection(
+                    title: context.l10n.latest,
+                    mangas: state.data.latest,
+                  ),
+                  HomeSection(
+                    title: context.l10n.popular,
+                    mangas: state.data.popular,
+                  ),
                 ],
               ),
               HomeError() => HomeErrorRetry(
@@ -81,6 +106,12 @@ class HomeScreen extends StatelessWidget {
               _ => const SizedBox(),
             },
           );
+        },
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: const Icon(Icons.favorite_outline),
+        onPressed: () {
+          context.push('/library');
         },
       ),
     );

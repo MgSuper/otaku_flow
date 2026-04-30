@@ -42,30 +42,105 @@ class AppLocalizationsTh extends AppLocalizations {
   String get getStarted => 'เริ่มต้น';
 
   @override
-  String get onboardingTitle1 => 'เปิดตัวไอเดียได้เร็วขึ้น';
+  String get onboardingTitle1 => 'ค้นพบมังงะได้ทันที';
 
   @override
   String get onboardingDesc1 =>
-      'เริ่มแอป Flutter ตัวถัดไปด้วยโครงสร้างพร้อมใช้งานจริง ระบบธีม เส้นทาง และหลายภาษาที่ตั้งค่าไว้แล้ว';
+      'ค้นหามังงะยอดนิยม อัปเดตล่าสุด ซีรีส์ฮิต และหมวดหมู่ได้ในที่เดียว';
 
   @override
-  String get onboardingTitle2 => 'สร้างมาเพื่อสตาร์ทอัพจริงจัง';
+  String get onboardingTitle2 => 'สร้างมาเพื่อผู้อ่านตัวจริง';
 
   @override
   String get onboardingDesc2 =>
-      'ใช้โครงสร้างที่เป็นระเบียบ การจัดการสถานะที่ขยายได้ ระบบเครือข่าย และ CI/CD ตั้งแต่วันแรก';
+      'เพลิดเพลินกับการอ่านแนวตั้งลื่นไหล โหลดไว และประสบการณ์อ่านที่สะอาดตา';
 
   @override
-  String get onboardingTitle3 => 'ประหยัดเวลาหลายสัปดาห์';
+  String get onboardingTitle3 => 'อ่านต่อได้ทุกเวลา';
 
   @override
   String get onboardingDesc3 =>
-      'ไม่ต้องทำซ้ำเรื่อง flavors การเปลี่ยนชื่อแอป tests icons หรือ boilerplate ทุกครั้งที่เริ่มโปรเจกต์ใหม่';
+      'บันทึกความคืบหน้าอัตโนมัติ เพื่อกลับมาอ่านต่อจากจุดเดิมได้ทันที';
 
   @override
-  String get onboardingTitle4 => 'สร้าง เปิดตัว เติบโต';
+  String get onboardingTitle4 => 'บันทึกเรื่องโปรดของคุณ';
 
   @override
   String get onboardingDesc4 =>
-      'โฟกัสกับการแก้ปัญหาจริง และปล่อยโปรดักต์ได้เร็วขึ้นด้วย Startup Launch';
+      'สร้างคลังมังงะส่วนตัวด้วยรายการโปรด ประวัติการอ่าน และฟีเจอร์ใหม่ที่กำลังมา';
+
+  @override
+  String get library => 'คลังหนังสือ';
+
+  @override
+  String get trending => 'มาแรง';
+
+  @override
+  String get latest => 'ล่าสุด';
+
+  @override
+  String get popular => 'ยอดนิยม';
+
+  @override
+  String get searchMangaHint => 'ค้นหามังงะ ...';
+
+  @override
+  String get searchManga => 'ค้นหามังงะ';
+
+  @override
+  String get mangaNotFound => 'ไม่พบมังงะ';
+
+  @override
+  String get clearAndTryAgain => 'ล้างและลองใหม่';
+
+  @override
+  String get manga => 'มังงะ';
+
+  @override
+  String get loaded => 'โหลดแล้ว';
+
+  @override
+  String get pages => 'หน้า';
+
+  @override
+  String get summary => 'สรุป';
+
+  @override
+  String get page => 'หน้า';
+
+  @override
+  String get chapters => 'ตอน';
+
+  @override
+  String get chapter => 'ตอน';
+
+  @override
+  String get favorites => 'รายการโปรด';
+
+  @override
+  String get continueReading => 'อ่านต่อ';
+
+  @override
+  String get noFavoritesYet => 'ยังไม่มีรายการโปรด';
+
+  @override
+  String get navigationError => 'ข้อผิดพลาดในการนำทาง';
+
+  @override
+  String get unknownRoutingError => 'ข้อผิดพลาดเส้นทางที่ไม่ทราบสาเหตุ';
+
+  @override
+  String get retry => 'ลองอีกครั้ง';
+
+  @override
+  String get chapterUnavailable => 'ตอนนี้ไม่พร้อมใช้งาน';
+
+  @override
+  String get tryNextAvailable => 'ลองตอนถัดไปที่ใช้ได้';
+
+  @override
+  String get tryPrevious => 'ลองตอนก่อนหน้า';
+
+  @override
+  String get backToChapters => 'กลับไปยังรายการตอน';
 }

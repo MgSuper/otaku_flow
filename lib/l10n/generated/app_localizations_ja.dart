@@ -42,28 +42,101 @@ class AppLocalizationsJa extends AppLocalizations {
   String get getStarted => '始める';
 
   @override
-  String get onboardingTitle1 => 'アイデアをより早く公開';
+  String get onboardingTitle1 => 'すぐにマンガを見つけよう';
 
   @override
-  String get onboardingDesc1 =>
-      '本番対応アーキテクチャ、テーマ、ルーティング、多言語対応付きで次のFlutterアプリを始められます。';
+  String get onboardingDesc1 => '人気作品、最新更新、話題作、ジャンルをひとつの場所でチェックできます。';
 
   @override
-  String get onboardingTitle2 => '本気のスタートアップ向け';
+  String get onboardingTitle2 => '本物の読者のために設計';
 
   @override
-  String get onboardingDesc2 => 'クリーン構成、拡張しやすい状態管理、ネットワーク、CI/CD を初日から利用できます。';
+  String get onboardingDesc2 => '快適な縦読み、高速読み込み、シンプルで読みやすい体験を楽しめます。';
 
   @override
-  String get onboardingTitle3 => '数週間分の設定時間を節約';
+  String get onboardingTitle3 => 'いつでも続きを読む';
 
   @override
-  String get onboardingDesc3 =>
-      '新規プロジェクトごとに flavor、名前変更、テスト、アイコン、定型コードを繰り返す必要はありません。';
+  String get onboardingDesc3 => '読書進行状況は自動保存され、途中からすぐ再開できます。';
 
   @override
-  String get onboardingTitle4 => '作る。公開する。成長する。';
+  String get onboardingTitle4 => 'お気に入りを保存';
 
   @override
-  String get onboardingDesc4 => 'Startup Launch で本当に重要な課題解決と素早いリリースに集中できます。';
+  String get onboardingDesc4 => 'お気に入りや閲覧履歴で自分だけのマンガライブラリを作れます。今後さらに機能追加予定です。';
+
+  @override
+  String get library => 'ライブラリ';
+
+  @override
+  String get trending => '話題作';
+
+  @override
+  String get latest => '最新';
+
+  @override
+  String get popular => '人気';
+
+  @override
+  String get searchMangaHint => 'マンガを検索 ...';
+
+  @override
+  String get searchManga => 'マンガを検索';
+
+  @override
+  String get mangaNotFound => 'マンガが見つかりません';
+
+  @override
+  String get clearAndTryAgain => 'クリアして再試行';
+
+  @override
+  String get manga => 'マンガ';
+
+  @override
+  String get loaded => '読み込み完了';
+
+  @override
+  String get pages => 'ページ';
+
+  @override
+  String get summary => '概要';
+
+  @override
+  String get page => 'ページ';
+
+  @override
+  String get chapters => 'チャプター';
+
+  @override
+  String get chapter => 'チャプター';
+
+  @override
+  String get favorites => 'お気に入り';
+
+  @override
+  String get continueReading => '続きを読む';
+
+  @override
+  String get noFavoritesYet => 'お気に入りはまだありません';
+
+  @override
+  String get navigationError => 'ナビゲーションエラー';
+
+  @override
+  String get unknownRoutingError => '不明なルーティングエラー';
+
+  @override
+  String get retry => '再試行';
+
+  @override
+  String get chapterUnavailable => 'このチャプターは利用できません';
+
+  @override
+  String get tryNextAvailable => '次の利用可能な話へ';
+
+  @override
+  String get tryPrevious => '前の話を試す';
+
+  @override
+  String get backToChapters => 'チャプター一覧へ戻る';
 }

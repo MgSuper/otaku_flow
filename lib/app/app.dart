@@ -7,6 +7,7 @@ import 'package:startup_launch/app/theme/app_theme.dart';
 import 'package:startup_launch/app/theme/theme_cubit.dart';
 import 'package:startup_launch/core/config/app_config.dart';
 import 'package:startup_launch/core/di/service_locator.dart';
+import 'package:startup_launch/features/favorites/presentation/cubit/favorites_cubit.dart';
 import 'package:startup_launch/features/reader_progress/presentation/cubit/reading_progress_cubit.dart';
 import 'package:startup_launch/l10n/generated/app_localizations.dart';
 
@@ -26,6 +27,7 @@ class App extends StatelessWidget {
         BlocProvider.value(value: sl<ThemeCubit>()),
         BlocProvider.value(value: sl<LocaleCubit>()),
         BlocProvider(create: (_) => sl<ReadingProgressCubit>()),
+        BlocProvider(create: (_) => sl<FavoritesCubit>()),
       ],
       child: BlocBuilder<ThemeCubit, ThemeMode>(
         builder: (context, mode) {

@@ -215,6 +215,156 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Focus on solving real problems and shipping products faster with Startup Launch.'**
   String get onboardingDesc4;
+
+  /// Label for library screen title
+  ///
+  /// In en, this message translates to:
+  /// **'Library'**
+  String get library;
+
+  /// Home section title for trending manga
+  ///
+  /// In en, this message translates to:
+  /// **'Trending'**
+  String get trending;
+
+  /// Home section title for latest updated manga
+  ///
+  /// In en, this message translates to:
+  /// **'Latest'**
+  String get latest;
+
+  /// Home section title for popular manga
+  ///
+  /// In en, this message translates to:
+  /// **'Popular'**
+  String get popular;
+
+  /// Placeholder text in manga search field
+  ///
+  /// In en, this message translates to:
+  /// **'Search manga ...'**
+  String get searchMangaHint;
+
+  /// Search manga screen title
+  ///
+  /// In en, this message translates to:
+  /// **'Search manga'**
+  String get searchManga;
+
+  /// Message when no manga search result found
+  ///
+  /// In en, this message translates to:
+  /// **'Manga not found'**
+  String get mangaNotFound;
+
+  /// Action text when search returns no result
+  ///
+  /// In en, this message translates to:
+  /// **'Clear and try again'**
+  String get clearAndTryAgain;
+
+  /// General label for manga items
+  ///
+  /// In en, this message translates to:
+  /// **'Manga'**
+  String get manga;
+
+  /// Status label indicating content loaded
+  ///
+  /// In en, this message translates to:
+  /// **'Loaded'**
+  String get loaded;
+
+  /// Plural label for pages
+  ///
+  /// In en, this message translates to:
+  /// **'Pages'**
+  String get pages;
+
+  /// Section title for manga summary
+  ///
+  /// In en, this message translates to:
+  /// **'Summary'**
+  String get summary;
+
+  /// Singular label for page
+  ///
+  /// In en, this message translates to:
+  /// **'Page'**
+  String get page;
+
+  /// Plural label for chapter section
+  ///
+  /// In en, this message translates to:
+  /// **'Chapters'**
+  String get chapters;
+
+  /// Singular label for chapter
+  ///
+  /// In en, this message translates to:
+  /// **'Chapter'**
+  String get chapter;
+
+  /// Label for favorite manga section
+  ///
+  /// In en, this message translates to:
+  /// **'Favorites'**
+  String get favorites;
+
+  /// Label for continue reading section
+  ///
+  /// In en, this message translates to:
+  /// **'Continue Reading'**
+  String get continueReading;
+
+  /// Message shown when user has no favorite manga yet
+  ///
+  /// In en, this message translates to:
+  /// **'No favorites yet'**
+  String get noFavoritesYet;
+
+  /// Title shown on routing error screen
+  ///
+  /// In en, this message translates to:
+  /// **'Navigation error'**
+  String get navigationError;
+
+  /// Fallback message when route error is unknown
+  ///
+  /// In en, this message translates to:
+  /// **'Unknown routing error'**
+  String get unknownRoutingError;
+
+  /// Generic retry button label
+  ///
+  /// In en, this message translates to:
+  /// **'Retry'**
+  String get retry;
+
+  /// Title shown when selected chapter cannot be loaded
+  ///
+  /// In en, this message translates to:
+  /// **'Chapter Unavailable'**
+  String get chapterUnavailable;
+
+  /// Button label to open the next available chapter
+  ///
+  /// In en, this message translates to:
+  /// **'Try Next Available'**
+  String get tryNextAvailable;
+
+  /// Button label to open the previous available chapter
+  ///
+  /// In en, this message translates to:
+  /// **'Try Previous'**
+  String get tryPrevious;
+
+  /// Button label to return to chapter list
+  ///
+  /// In en, this message translates to:
+  /// **'Back to Chapters'**
+  String get backToChapters;
 }
 
 class _AppLocalizationsDelegate

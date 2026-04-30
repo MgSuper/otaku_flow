@@ -5,6 +5,8 @@ import 'package:startup_launch/app/theme/theme_cubit.dart';
 import 'package:startup_launch/core/config/app_config.dart';
 import 'package:startup_launch/core/network/api_client.dart';
 import 'package:startup_launch/core/network/dio_factory.dart';
+import 'package:startup_launch/features/favorites/data/favorites_storage.dart';
+import 'package:startup_launch/features/favorites/presentation/cubit/favorites_cubit.dart';
 import 'package:startup_launch/features/home/data/datasource/home_remote_data_source.dart';
 import 'package:startup_launch/features/home/data/datasource/home_remote_data_source_impl.dart';
 import 'package:startup_launch/features/home/data/repositories/home_repository_impl.dart';
@@ -107,4 +109,8 @@ Future<void> setupLocator(AppConfig config) async {
   sl.registerLazySingleton(() => ReadingProgressStorage(sl()));
 
   sl.registerLazySingleton(() => ReadingProgressCubit(sl())..load());
+
+  sl.registerLazySingleton(() => FavoritesStorage(sl()));
+
+  sl.registerLazySingleton(() => FavoritesCubit(sl()));
 }

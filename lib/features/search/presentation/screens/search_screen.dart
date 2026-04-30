@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:startup_launch/core/extensions/l10n.dart';
 import 'package:startup_launch/features/search/presentation/bloc/search_bloc.dart';
 import 'package:startup_launch/features/search/presentation/bloc/search_event.dart';
 import 'package:startup_launch/features/search/presentation/bloc/search_state.dart';
@@ -46,7 +47,7 @@ class _SearchScreenState extends State<SearchScreen> {
                 context.read<SearchBloc>().add(SearchSubmitted(value));
               },
               decoration: InputDecoration(
-                hintText: 'Search manga...',
+                hintText: context.l10n.searchMangaHint,
                 border: InputBorder.none,
                 // The Clear Button
                 suffixIcon: IconButton(
@@ -63,11 +64,10 @@ class _SearchScreenState extends State<SearchScreen> {
           ),
           body: BlocBuilder<SearchBloc, SearchState>(
             builder: (_, state) {
-              debugPrint('Current UI State: $state');
               return switch (state) {
                 SearchIdle() =>
                   state.history.isEmpty
-                      ? const Center(child: Text('Search manga'))
+                      ? Center(child: Text(context.l10n.searchManga))
                       : Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 18.0),
                           child: Wrap(
@@ -122,7 +122,7 @@ class _SearchScreenState extends State<SearchScreen> {
                       ),
                       const SizedBox(height: 16),
                       Text(
-                        'Nothing found in the darkness.',
+                        context.l10n.mangaNotFound,
                         style: TextStyle(
                           fontSize: 18,
                           fontWeight: FontWeight.bold,
@@ -132,7 +132,7 @@ class _SearchScreenState extends State<SearchScreen> {
                       TextButton(
                         onPressed: () =>
                             context.read<SearchBloc>().add(SearchCleared()),
-                        child: const Text('Clear and try again'),
+                        child: Text(context.l10n.clearAndTryAgain),
                       ),
                     ],
                   ),

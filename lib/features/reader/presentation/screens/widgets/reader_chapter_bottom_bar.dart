@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:startup_launch/core/extensions/l10n.dart';
 
 class ReaderChapterBottomBar extends StatelessWidget {
   final List<dynamic> chapters;
@@ -49,7 +50,8 @@ class ReaderChapterBottomBar extends StatelessWidget {
     final bool isOldestInList = index == chapters.length - 1;
 
     final currentChapter = chapters[index];
-    final chapterLabel = currentChapter.title ?? 'Chapter ${index + 1}';
+    final chapterLabel =
+        currentChapter.title ?? '${context.l10n.chapter} ${index + 1}';
     final progressLabel = '${chapters.length - index} of ${chapters.length}';
 
     return Row(
