@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:startup_launch/core/extensions/l10n.dart';
 
 class HomeErrorRetry extends StatelessWidget {
   final String message;
@@ -18,7 +19,7 @@ class HomeErrorRetry extends StatelessWidget {
         children: [
           Text(message),
           const SizedBox(height: 12),
-          ElevatedButton(onPressed: onRetry, child: const Text('Retry')),
+          ElevatedButton(onPressed: onRetry, child: Text(context.l10n.retry)),
         ],
       ),
     );

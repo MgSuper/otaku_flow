@@ -8,7 +8,6 @@ import 'package:startup_launch/features/home/presentation/bloc/home_state.dart';
 import 'package:startup_launch/features/home/presentation/widgets/home_error.dart';
 import 'package:startup_launch/features/home/presentation/widgets/home_loading.dart';
 import 'package:startup_launch/features/home/presentation/widgets/home_section.dart';
-import 'package:startup_launch/features/home/presentation/widgets/quick_actions.dart';
 import 'package:startup_launch/features/manga/domain/entities/manga.dart';
 import 'package:startup_launch/features/reader/presentation/screens/widgets/continue_reading_card.dart';
 import 'package:startup_launch/features/reader_progress/presentation/cubit/reading_progress_cubit.dart';
