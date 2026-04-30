@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:startup_launch/core/di/service_locator.dart';
 import 'package:startup_launch/features/manga_detail/domain/entities/manga_detail.dart';
 import 'package:startup_launch/features/manga_detail/domain/usecases/get_manga_detail_usecase.dart';
-import 'package:startup_launch/features/manga_detail/presentation/bloc/manga_detail_bloc.dart';
-import 'package:startup_launch/features/manga_detail/presentation/bloc/manga_detail_event.dart';
 import 'package:startup_launch/features/reader_progress/domain/entities/reading_progress.dart';
 
 class ContinueReadingCard extends StatelessWidget {

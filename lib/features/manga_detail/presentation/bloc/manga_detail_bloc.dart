@@ -50,12 +50,12 @@ class MangaDetailBloc extends Bloc<MangaDetailEvent, MangaDetailState> {
         // We don't await this so it happens in the background
         unawaited(
           getDetail(mangaId: _mangaId, page: 2).then((_) {
-            debugPrint('[MangaDetailBloc] ✅ Prefetch for Page 2 Finished.');
+            debugPrint('[MangaDetailBloc] Prefetch for Page 2 Finished.');
           }),
         );
       }
     } catch (e) {
-      debugPrint('[MangaDetailBloc] ❌ Error in _load: $e');
+      debugPrint('[MangaDetailBloc] Error in _load: $e');
       emit(MangaDetailError(e.toString()));
     }
   }

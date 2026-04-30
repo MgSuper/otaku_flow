@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:startup_launch/core/di/service_locator.dart';
 import 'package:startup_launch/core/extensions/l10n.dart';
 import 'package:startup_launch/features/home/presentation/bloc/home_bloc.dart';
 import 'package:startup_launch/features/home/presentation/bloc/home_event.dart';
@@ -11,7 +10,6 @@ import 'package:startup_launch/features/home/presentation/widgets/home_loading.d
 import 'package:startup_launch/features/home/presentation/widgets/home_section.dart';
 import 'package:startup_launch/features/manga/domain/entities/manga.dart';
 import 'package:startup_launch/features/reader/presentation/screens/widgets/continue_reading_card.dart';
-import 'package:startup_launch/features/reader_progress/data/reading_progress_storage.dart';
 import 'package:startup_launch/features/reader_progress/presentation/cubit/reading_progress_cubit.dart';
 import 'package:startup_launch/features/reader_progress/presentation/cubit/reading_progress_state.dart';
 
@@ -30,8 +28,6 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // final progress = sl<ReadingProgressStorage>().get();
-    // print('progress: $progress');
     return Scaffold(
       appBar: AppBar(
         centerTitle: false,

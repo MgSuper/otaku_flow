@@ -4,8 +4,6 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:startup_launch/core/di/service_locator.dart';
-import 'package:startup_launch/features/manga_detail/presentation/bloc/manga_detail_bloc.dart';
-import 'package:startup_launch/features/manga_detail/presentation/bloc/manga_detail_event.dart';
 import 'package:startup_launch/features/reader/presentation/bloc/reader_bloc.dart';
 import 'package:startup_launch/features/reader/presentation/bloc/reader_state.dart';
 import 'package:startup_launch/features/reader/presentation/screens/widgets/reader_chapter_bottom_bar.dart';
