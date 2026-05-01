@@ -44,52 +44,52 @@ class App extends StatelessWidget {
                 supportedLocales: AppLocalizations.supportedLocales,
                 localizationsDelegates: AppLocalizations.localizationsDelegates,
 
-                builder: (context, child) {
-                  if (!config.isProd) {
-                    return Stack(
-                      children: [
-                        child!,
+                // builder: (context, child) {
+                //   if (!config.isProd) {
+                //     return Stack(
+                //       children: [
+                //         child!,
 
-                        SafeArea(
-                          child: Align(
-                            alignment: Alignment.topRight,
-                            child: Padding(
-                              padding: const EdgeInsets.all(12),
-                              child: Container(
-                                padding: const EdgeInsets.symmetric(
-                                  horizontal: 10,
-                                  vertical: 6,
-                                ),
-                                decoration: BoxDecoration(
-                                  color: config.bannerColor.withValues(
-                                    alpha: 0.85,
-                                  ),
-                                  borderRadius: BorderRadius.circular(20),
-                                  boxShadow: const [
-                                    BoxShadow(
-                                      blurRadius: 12,
-                                      color: Colors.black26,
-                                    ),
-                                  ],
-                                ),
-                                child: Text(
-                                  config.bannerLabel,
-                                  style: const TextStyle(
-                                    color: Colors.white,
-                                    fontSize: 11,
-                                    fontWeight: FontWeight.bold,
-                                    letterSpacing: 1.2,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    );
-                  }
-                  return child!;
-                },
+                //         SafeArea(
+                //           child: Align(
+                //             alignment: Alignment.topRight,
+                //             child: Padding(
+                //               padding: const EdgeInsets.all(12),
+                //               child: Container(
+                //                 padding: const EdgeInsets.symmetric(
+                //                   horizontal: 10,
+                //                   vertical: 6,
+                //                 ),
+                //                 decoration: BoxDecoration(
+                //                   color: config.bannerColor.withValues(
+                //                     alpha: 0.85,
+                //                   ),
+                //                   borderRadius: BorderRadius.circular(20),
+                //                   boxShadow: const [
+                //                     BoxShadow(
+                //                       blurRadius: 12,
+                //                       color: Colors.black26,
+                //                     ),
+                //                   ],
+                //                 ),
+                //                 child: Text(
+                //                   config.bannerLabel,
+                //                   style: const TextStyle(
+                //                     color: Colors.white,
+                //                     fontSize: 11,
+                //                     fontWeight: FontWeight.bold,
+                //                     letterSpacing: 1.2,
+                //                   ),
+                //                 ),
+                //               ),
+                //             ),
+                //           ),
+                //         ),
+                //       ],
+                //     );
+                //   }
+                //   return child!;
+                // },
               );
 
               return child;

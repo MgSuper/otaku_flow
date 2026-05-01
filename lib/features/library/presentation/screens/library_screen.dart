@@ -16,7 +16,6 @@ class LibraryScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(centerTitle: false, title: Text(context.l10n.library)),
       body: ListView(
-        padding: const EdgeInsets.all(16),
         children: [
           _buildContinueReading(context),
 
@@ -24,9 +23,9 @@ class LibraryScreen extends StatelessWidget {
 
           _buildFavorites(context),
 
-          const SizedBox(height: 24),
+          // const SizedBox(height: 24),
 
-          _buildDownloads(),
+          // _buildDownloads(),
         ],
       ),
     );
@@ -44,9 +43,12 @@ class LibraryScreen extends StatelessWidget {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              context.l10n.continueReading,
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 18.0),
+              child: Text(
+                context.l10n.continueReading,
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
             ),
 
             const SizedBox(height: 12),
@@ -61,68 +63,72 @@ class LibraryScreen extends StatelessWidget {
   Widget _buildFavorites(BuildContext context) {
     return BlocBuilder<FavoritesCubit, List<FavoriteManga>>(
       builder: (_, items) {
-        return Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              context.l10n.favorites,
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-            ),
+        return Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 18.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                context.l10n.favorites,
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              ),
 
-            const SizedBox(height: 12),
+              const SizedBox(height: 12),
 
-            items.isEmpty
-                ? Text(context.l10n.noFavoritesYet)
-                : GridView.builder(
-                    shrinkWrap: true,
-                    physics: const NeverScrollableScrollPhysics(),
-                    itemCount: items.length,
-                    gridDelegate:
-                        const SliverGridDelegateWithFixedCrossAxisCount(
-                          crossAxisCount: 3,
-                          childAspectRatio: .58,
-                          crossAxisSpacing: 12,
-                          mainAxisSpacing: 12,
-                        ),
-                    itemBuilder: (_, index) {
-                      final item = items[index];
+              items.isEmpty
+                  ? Text(context.l10n.noFavoritesYet)
+                  : GridView.builder(
+                      shrinkWrap: true,
+                      physics: const NeverScrollableScrollPhysics(),
+                      itemCount: items.length,
+                      gridDelegate:
+                          const SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 3,
+                            childAspectRatio: .58,
+                            crossAxisSpacing: 12,
+                            mainAxisSpacing: 12,
+                          ),
+                      itemBuilder: (_, index) {
+                        final item = items[index];
 
-                      return InkWell(
-                        onTap: () {
-                          context.push('/manga/${item.id}');
-                        },
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Expanded(
-                              child: ClipRRect(
-                                borderRadius: BorderRadius.circular(12),
-                                child: Image.network(
-                                  item.coverUrl,
-                                  fit: BoxFit.cover,
-                                  width: double.infinity,
+                        return InkWell(
+                          onTap: () {
+                            context.push('/manga/${item.id}');
+                          },
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Expanded(
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(12),
+                                  child: Image.network(
+                                    item.coverUrl,
+                                    fit: BoxFit.cover,
+                                    width: double.infinity,
+                                  ),
                                 ),
                               ),
-                            ),
 
-                            const SizedBox(height: 6),
+                              const SizedBox(height: 6),
 
-                            Text(
-                              item.title,
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                          ],
-                        ),
-                      );
-                    },
-                  ),
-          ],
+                              Text(
+                                item.title,
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                            ],
+                          ),
+                        );
+                      },
+                    ),
+            ],
+          ),
         );
       },
     );
   }
 
+  // ignore: unused_element
   Widget _buildDownloads() {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,

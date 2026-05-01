@@ -143,4 +143,31 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get backToChapters => 'Quay lại danh sách chương';
+
+  @override
+  String get goodMorning => 'Chào buổi sáng';
+
+  @override
+  String get goodAfternoon => 'Chào buổi chiều';
+
+  @override
+  String get goodEvening => 'Chào buổi tối';
+
+  @override
+  String get goodNight => 'Chúc ngủ ngon';
+
+  @override
+  String get quote1 => 'Sẵn sàng cho chương tiếp theo chưa?';
+
+  @override
+  String get quote2 => 'Mỗi trang là một câu chuyện mới.';
+
+  @override
+  String get quote3 => 'Tiếp tục từ nơi bạn dừng lại.';
+
+  @override
+  String get quote4 => 'Phiêu lưu chỉ cách một chạm.';
+
+  @override
+  String get quote5 => 'Hôm nay bạn muốn đọc gì?';
 }

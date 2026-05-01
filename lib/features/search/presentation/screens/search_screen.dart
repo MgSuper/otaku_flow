@@ -16,10 +16,18 @@ class SearchScreen extends StatefulWidget {
 
 class _SearchScreenState extends State<SearchScreen> {
   final TextEditingController _controller = TextEditingController();
+  final ScrollController _scrollController = ScrollController();
 
   @override
   void initState() {
     super.initState();
+    _scrollController.addListener(() {
+      if (_scrollController.position.pixels >
+          _scrollController.position.maxScrollExtent - 300) {
+        context.read<SearchBloc>().add(SearchLoadMore());
+      }
+    });
+
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (mounted) {
         context.read<SearchBloc>().add(LoadSearchHistory());
@@ -30,6 +38,7 @@ class _SearchScreenState extends State<SearchScreen> {
   @override
   void dispose() {
     _controller.dispose();
+    _scrollController.dispose();
     super.dispose();
   }
 
@@ -108,8 +117,11 @@ class _SearchScreenState extends State<SearchScreen> {
                         ),
 
                 SearchLoading() => const SearchLoadingView(),
-
-                SearchLoaded() => SearchLoadedView(mangas: state.mangas),
+                SearchLoaded() => SearchLoadedView(
+                  mangas: state.mangas,
+                  loadingMore: state.loadingMore,
+                  controller: _scrollController,
+                ),
 
                 SearchEmpty() => Center(
                   child: Column(

@@ -46,7 +46,7 @@ class AppRouter {
             return BlocProvider(
               // The Bloc is created at the Router level
               create: (_) => sl<HomeBloc>()..add(LoadHome()),
-              child: const HomeScreen(),
+              child: HomeScreen(),
             );
           },
         ),
@@ -86,8 +86,6 @@ class AppRouter {
           path: '/reader/:id',
           builder: (context, state) {
             final id = state.pathParameters['id']!;
-
-            debugPrint('ROUTER reader => id=$id');
 
             final extra = state.extra as Map?;
 

@@ -175,5 +175,41 @@
   "backToChapters": "กลับไปยังรายการตอน",
   "@backToChapters": {
     "description": "Button label to return to chapter list"
+  },
+  "goodMorning": "สวัสดีตอนเช้า",
+  "@goodMorning": {
+    "description": "Greeting shown in the morning on home app bar"
+  },
+  "goodAfternoon": "สวัสดีตอนบ่าย",
+  "@goodAfternoon": {
+    "description": "Greeting shown in the afternoon on home app bar"
+  },
+  "goodEvening": "สวัสดีตอนเย็น",
+  "@goodEvening": {
+    "description": "Greeting shown in the evening on home app bar"
+  },
+  "goodNight": "ราตรีสวัสดิ์",
+  "@goodNight": {
+    "description": "Greeting shown at night on home app bar"
+  },
+  "quote1": "พร้อมสำหรับตอนต่อไปหรือยัง?",
+  "@quote1": {
+    "description": "Home dynamic quote"
+  },
+  "quote2": "ทุกหน้าคือจุดเริ่มต้นของเรื่องใหม่",
+  "@quote2": {
+    "description": "Home dynamic quote"
+  },
+  "quote3": "อ่านต่อจากจุดที่คุณหยุดไว้",
+  "@quote3": {
+    "description": "Home dynamic quote"
+  },
+  "quote4": "การผจญภัยอยู่ห่างออกไปเพียงหนึ่งแตะ",
+  "@quote4": {
+    "description": "Home dynamic quote"
+  },
+  "quote5": "วันนี้คุณจะอ่านอะไร?",
+  "@quote5": {
+    "description": "Home dynamic quote"
   }
 }

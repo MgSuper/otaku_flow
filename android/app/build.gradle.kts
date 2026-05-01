@@ -16,19 +16,19 @@ android {
             dimension = "env"
             applicationIdSuffix = ".dev"
             versionNameSuffix = "-dev"
-            resValue("string", "app_name", "Startup Launch Dev")
+            resValue("string", "app_name", "Otaku Flow Dev")
         }
 
         create("staging") {
             dimension = "env"
             applicationIdSuffix = ".staging"
             versionNameSuffix = "-staging"
-            resValue("string", "app_name", "Startup Launch Staging")
+            resValue("string", "app_name", "Otaku Flow Staging")
         }
 
         create("prod") {
             dimension = "env"
-            resValue("string", "app_name", "Startup Launch")
+            resValue("string", "app_name", "Otaku Flow")
         }
     }
 

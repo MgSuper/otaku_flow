@@ -23,7 +23,7 @@ class MangaDetailBloc extends Bloc<MangaDetailEvent, MangaDetailState> {
   ) async {
     try {
       debugPrint('-----------------------------------------');
-      debugPrint('[MangaDetailBloc] 🏁 Initial Load for: ${event.mangaId}');
+      debugPrint('[MangaDetailBloc] Initial Load for: ${event.mangaId}');
       debugPrint(
         '[MangaDetailBloc] Initial Load for event.page : ${event.page}',
       );
@@ -46,7 +46,7 @@ class MangaDetailBloc extends Bloc<MangaDetailEvent, MangaDetailState> {
       // PREFETCH LOGIC
       // Since this is page 1, we check if there is a page 2
       if (1 < result.totalPages) {
-        debugPrint('[MangaDetailBloc] ⚡ Starting Prefetch for Page 2...');
+        debugPrint('[MangaDetailBloc] Starting Prefetch for Page 2...');
         // We don't await this so it happens in the background
         unawaited(
           getDetail(mangaId: _mangaId, page: 2).then((_) {
@@ -56,7 +56,7 @@ class MangaDetailBloc extends Bloc<MangaDetailEvent, MangaDetailState> {
       }
     } catch (e) {
       debugPrint('[MangaDetailBloc] Error in _load: $e');
-      emit(MangaDetailError(e.toString()));
+      emit(MangaDetailError('Failed to load manga details'));
     }
   }
 
@@ -66,27 +66,25 @@ class MangaDetailBloc extends Bloc<MangaDetailEvent, MangaDetailState> {
   ) async {
     final current = state as MangaDetailLoaded;
 
-    debugPrint('currentPage: event.page ${event.page}');
-
     emit(current.copyWith(loadingChapters: true, currentPage: event.page));
 
-    final result = await getDetail(mangaId: _mangaId, page: event.page);
+    try {
+      final result = await getDetail(mangaId: _mangaId, page: event.page);
 
-    emit(
-      current.copyWith(
-        chapters: result.chapters,
-        currentPage: event.page,
-        totalPages: result.totalPages,
-        loadingChapters: false,
-      ),
-    );
-    if (event.page < result.totalPages) {
-      debugPrint('[MangaDetailBloc] ⚡ Starting Prefetch for Page 2...');
-      unawaited(
-        getDetail(mangaId: _mangaId, page: event.page + 1).then((_) {
-          debugPrint('[MangaDetailBloc] ✅ Prefetch for Page 2 Finished.');
-        }),
+      emit(
+        current.copyWith(
+          chapters: result.chapters,
+          currentPage: event.page,
+          totalPages: result.totalPages,
+          loadingChapters: false,
+        ),
       );
+
+      if (event.page < result.totalPages) {
+        unawaited(getDetail(mangaId: _mangaId, page: event.page + 1));
+      }
+    } catch (e) {
+      emit(current.copyWith(loadingChapters: false));
     }
   }
 }

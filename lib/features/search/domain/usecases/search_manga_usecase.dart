@@ -6,7 +6,7 @@ class SearchMangaUseCase {
 
   SearchMangaUseCase(this.repository);
 
-  Future<List<Manga>> call(String query) {
-    return repository.search(query);
+  Future<List<Manga>> call(String query, {int offset = 0}) {
+    return repository.search(query, offset: offset);
   }
 }

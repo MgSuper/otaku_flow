@@ -143,4 +143,31 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get backToChapters => 'กลับไปยังรายการตอน';
+
+  @override
+  String get goodMorning => 'สวัสดีตอนเช้า';
+
+  @override
+  String get goodAfternoon => 'สวัสดีตอนบ่าย';
+
+  @override
+  String get goodEvening => 'สวัสดีตอนเย็น';
+
+  @override
+  String get goodNight => 'ราตรีสวัสดิ์';
+
+  @override
+  String get quote1 => 'พร้อมสำหรับตอนต่อไปหรือยัง?';
+
+  @override
+  String get quote2 => 'ทุกหน้าคือจุดเริ่มต้นของเรื่องใหม่';
+
+  @override
+  String get quote3 => 'อ่านต่อจากจุดที่คุณหยุดไว้';
+
+  @override
+  String get quote4 => 'การผจญภัยอยู่ห่างออกไปเพียงหนึ่งแตะ';
+
+  @override
+  String get quote5 => 'วันนี้คุณจะอ่านอะไร?';
 }

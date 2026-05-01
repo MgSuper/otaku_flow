@@ -175,5 +175,41 @@
   "backToChapters": "チャプター一覧へ戻る",
   "@backToChapters": {
     "description": "Button label to return to chapter list"
+  },
+  "goodMorning": "おはようございます",
+  "@goodMorning": {
+    "description": "Greeting shown in the morning on home app bar"
+  },
+  "goodAfternoon": "こんにちは",
+  "@goodAfternoon": {
+    "description": "Greeting shown in the afternoon on home app bar"
+  },
+  "goodEvening": "こんばんは",
+  "@goodEvening": {
+    "description": "Greeting shown in the evening on home app bar"
+  },
+  "goodNight": "おやすみなさい",
+  "@goodNight": {
+    "description": "Greeting shown at night on home app bar"
+  },
+  "quote1": "次のチャプターへ進む準備はできましたか？",
+  "@quote1": {
+    "description": "Home dynamic quote"
+  },
+  "quote2": "すべてのページが新しい物語の始まりです。",
+  "@quote2": {
+    "description": "Home dynamic quote"
+  },
+  "quote3": "途中から続きを読む。",
+  "@quote3": {
+    "description": "Home dynamic quote"
+  },
+  "quote4": "冒険はワンタップ先にあります。",
+  "@quote4": {
+    "description": "Home dynamic quote"
+  },
+  "quote5": "今日は何を読みますか？",
+  "@quote5": {
+    "description": "Home dynamic quote"
   }
 }

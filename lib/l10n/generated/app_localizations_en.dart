@@ -42,32 +42,32 @@ class AppLocalizationsEn extends AppLocalizations {
   String get getStarted => 'Get Started';
 
   @override
-  String get onboardingTitle1 => 'Launch ideas faster';
+  String get onboardingTitle1 => 'Discover manga instantly';
 
   @override
   String get onboardingDesc1 =>
-      'Start your next Flutter app with production-ready architecture, themes, routing, and localization already setup.';
+      'Browse trending manga, latest updates, popular series, and genres in one place.';
 
   @override
-  String get onboardingTitle2 => 'Built for serious startups';
+  String get onboardingTitle2 => 'Built for real readers';
 
   @override
   String get onboardingDesc2 =>
-      'Use clean structure, scalable state management, networking, and CI/CD from day one.';
+      'Enjoy smooth vertical reading, fast loading pages, and a clean reading experience.';
 
   @override
-  String get onboardingTitle3 => 'Save weeks of setup';
+  String get onboardingTitle3 => 'Continue anytime';
 
   @override
   String get onboardingDesc3 =>
-      'No more repeating flavors, rename configs, tests, icons, or boilerplate every new project.';
+      'Your reading progress is saved automatically so you can resume exactly where you stopped.';
 
   @override
-  String get onboardingTitle4 => 'Build. Launch. Grow.';
+  String get onboardingTitle4 => 'Save your favorites';
 
   @override
   String get onboardingDesc4 =>
-      'Focus on solving real problems and shipping products faster with Startup Launch.';
+      'Build your personal manga library with favorites, history, and more features coming soon.';
 
   @override
   String get library => 'Library';
@@ -143,4 +143,31 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get backToChapters => 'Back to Chapters';
+
+  @override
+  String get goodMorning => 'Good Morning';
+
+  @override
+  String get goodAfternoon => 'Good Afternoon';
+
+  @override
+  String get goodEvening => 'Good Evening';
+
+  @override
+  String get goodNight => 'Good Night';
+
+  @override
+  String get quote1 => 'Ready for another chapter?';
+
+  @override
+  String get quote2 => 'Every page starts a new story.';
+
+  @override
+  String get quote3 => 'Continue where you left off.';
+
+  @override
+  String get quote4 => 'Adventure is one tap away.';
+
+  @override
+  String get quote5 => 'What will you read today?';
 }

@@ -9,6 +9,7 @@ import 'package:startup_launch/features/reader/presentation/bloc/reader_state.da
 import 'package:startup_launch/features/reader/presentation/screens/widgets/reader_chapter_bottom_bar.dart';
 import 'package:startup_launch/features/reader/presentation/screens/widgets/reader_loading_view.dart';
 import 'package:startup_launch/features/reader/presentation/screens/widgets/reader_unavailable_view.dart';
+import 'package:startup_launch/features/reader/presentation/screens/widgets/zoomable_manga_page.dart';
 import 'package:startup_launch/features/reader_progress/data/reading_progress_storage.dart';
 import 'package:startup_launch/features/reader_progress/domain/entities/reading_progress.dart';
 import 'package:startup_launch/features/reader_progress/presentation/cubit/reading_progress_cubit.dart';
@@ -180,19 +181,8 @@ class _ReaderScreenState extends State<ReaderScreen>
 
                 SliverList(
                   delegate: SliverChildBuilderDelegate((context, index) {
-                    return CachedNetworkImage(
+                    return ZoomableMangaPage(
                       imageUrl: chapter.imageUrls[index],
-                      fit: BoxFit.fitWidth,
-                      memCacheWidth: 1200,
-                      fadeInDuration: Duration.zero,
-                      placeholder: (_, _) => AspectRatio(
-                        aspectRatio: 0.7,
-                        child: ColoredBox(color: Colors.black12),
-                      ),
-                      errorWidget: (_, _, _) => const SizedBox(
-                        height: 200,
-                        child: Center(child: Icon(Icons.broken_image)),
-                      ),
                     );
                   }, childCount: chapter.imageUrls.length),
                 ),

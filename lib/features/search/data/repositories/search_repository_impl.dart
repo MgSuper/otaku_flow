@@ -8,7 +8,7 @@ class SearchRepositoryImpl implements SearchRepository {
   SearchRepositoryImpl(this.remote);
 
   @override
-  Future<List<Manga>> search(String query) {
-    return remote.search(query);
+  Future<List<Manga>> search(String query, {int offset = 0}) {
+    return remote.search(query, offset: offset);
   }
 }

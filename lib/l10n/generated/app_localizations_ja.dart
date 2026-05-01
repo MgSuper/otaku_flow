@@ -139,4 +139,31 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get backToChapters => 'チャプター一覧へ戻る';
+
+  @override
+  String get goodMorning => 'おはようございます';
+
+  @override
+  String get goodAfternoon => 'こんにちは';
+
+  @override
+  String get goodEvening => 'こんばんは';
+
+  @override
+  String get goodNight => 'おやすみなさい';
+
+  @override
+  String get quote1 => '次のチャプターへ進む準備はできましたか？';
+
+  @override
+  String get quote2 => 'すべてのページが新しい物語の始まりです。';
+
+  @override
+  String get quote3 => '途中から続きを読む。';
+
+  @override
+  String get quote4 => '冒険はワンタップ先にあります。';
+
+  @override
+  String get quote5 => '今日は何を読みますか？';
 }

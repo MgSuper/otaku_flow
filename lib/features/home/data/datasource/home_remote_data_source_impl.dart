@@ -16,11 +16,11 @@ class HomeRemoteDataSourceImpl implements HomeRemoteDataSource {
         'limit': 10,
         'order[followedCount]': 'desc',
         'includes[]': ['cover_art'],
+        'contentRating[]': ['safe', 'suggestive'],
       },
     );
-    return compute(_parseMangaList, res.data['data'] as List);
 
-    // return MangaModel.fromList(res.data['data']);
+    return compute(_parseMangaList, res.data['data'] as List);
   }
 
   @override
@@ -31,6 +31,7 @@ class HomeRemoteDataSourceImpl implements HomeRemoteDataSource {
         'limit': 10,
         'order[latestUploadedChapter]': 'desc',
         'includes[]': ['cover_art'],
+        'contentRating[]': ['safe', 'suggestive'],
       },
     );
 
@@ -45,6 +46,7 @@ class HomeRemoteDataSourceImpl implements HomeRemoteDataSource {
         'limit': 10,
         'order[rating]': 'desc',
         'includes[]': ['cover_art'],
+        'contentRating[]': ['safe', 'suggestive'],
       },
     );
 

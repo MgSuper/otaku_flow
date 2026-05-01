@@ -44,6 +44,27 @@ class ReaderUnavailableView extends StatelessWidget {
             Text(state.message, textAlign: TextAlign.center),
 
             const SizedBox(height: 28),
+            if (hasPrev)
+              SizedBox(
+                width: double.infinity,
+                child: OutlinedButton.icon(
+                  onPressed: () {
+                    final prev = state.chapters[state.index - 1];
+
+                    context.read<ReaderBloc>().add(
+                      LoadReaderChapter(
+                        chapterId: prev.id,
+                        chapters: state.chapters,
+                        index: state.index - 1,
+                        hasNextPage: hasNextPage,
+                        hasPrevPage: hasPrevPage,
+                      ),
+                    );
+                  },
+                  icon: const Icon(Icons.skip_next),
+                  label: Text(context.l10n.tryNextAvailable),
+                ),
+              ),
 
             if (hasNext)
               SizedBox(
@@ -62,34 +83,12 @@ class ReaderUnavailableView extends StatelessWidget {
                       ),
                     );
                   },
-                  icon: const Icon(Icons.skip_next),
-                  label: Text(context.l10n.tryNextAvailable),
-                ),
-              ),
-
-            const SizedBox(height: 12),
-
-            if (hasPrev)
-              SizedBox(
-                width: double.infinity,
-                child: OutlinedButton.icon(
-                  onPressed: () {
-                    final prev = state.chapters[state.index - 1];
-
-                    context.read<ReaderBloc>().add(
-                      LoadReaderChapter(
-                        chapterId: prev.id,
-                        chapters: state.chapters,
-                        index: state.index - 1,
-                        hasNextPage: hasNextPage,
-                        hasPrevPage: hasPrevPage,
-                      ),
-                    );
-                  },
                   icon: const Icon(Icons.skip_previous),
                   label: Text(context.l10n.tryPrevious),
                 ),
               ),
+
+            const SizedBox(height: 12),
 
             const SizedBox(height: 12),
 

@@ -175,5 +175,41 @@
   "backToChapters": "Back to Chapters",
   "@backToChapters": {
     "description": "Button label to return to chapter list"
+  },
+  "goodMorning": "Good Morning",
+  "@goodMorning": {
+    "description": "Greeting shown in the morning on home app bar"
+  },
+  "goodAfternoon": "Good Afternoon",
+  "@goodAfternoon": {
+    "description": "Greeting shown in the afternoon on home app bar"
+  },
+  "goodEvening": "Good Evening",
+  "@goodEvening": {
+    "description": "Greeting shown in the evening on home app bar"
+  },
+  "goodNight": "Good Night",
+  "@goodNight": {
+    "description": "Greeting shown at night on home app bar"
+  },
+  "quote1": "Ready for another chapter?",
+  "@quote1": {
+    "description": "Home dynamic quote"
+  },
+  "quote2": "Every page starts a new story.",
+  "@quote2": {
+    "description": "Home dynamic quote"
+  },
+  "quote3": "Continue where you left off.",
+  "@quote3": {
+    "description": "Home dynamic quote"
+  },
+  "quote4": "Adventure is one tap away.",
+  "@quote4": {
+    "description": "Home dynamic quote"
+  },
+  "quote5": "What will you read today?",
+  "@quote5": {
+    "description": "Home dynamic quote"
   }
 }

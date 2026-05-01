@@ -171,49 +171,49 @@ abstract class AppLocalizations {
   /// Label for onboarding title 1
   ///
   /// In en, this message translates to:
-  /// **'Launch ideas faster'**
+  /// **'Discover manga instantly'**
   String get onboardingTitle1;
 
   /// Label for onboarding title 1 description
   ///
   /// In en, this message translates to:
-  /// **'Start your next Flutter app with production-ready architecture, themes, routing, and localization already setup.'**
+  /// **'Browse trending manga, latest updates, popular series, and genres in one place.'**
   String get onboardingDesc1;
 
   /// Label for onboarding title 2
   ///
   /// In en, this message translates to:
-  /// **'Built for serious startups'**
+  /// **'Built for real readers'**
   String get onboardingTitle2;
 
   /// Label for onboarding title 2 description
   ///
   /// In en, this message translates to:
-  /// **'Use clean structure, scalable state management, networking, and CI/CD from day one.'**
+  /// **'Enjoy smooth vertical reading, fast loading pages, and a clean reading experience.'**
   String get onboardingDesc2;
 
   /// Label for onboarding title 3
   ///
   /// In en, this message translates to:
-  /// **'Save weeks of setup'**
+  /// **'Continue anytime'**
   String get onboardingTitle3;
 
   /// Label for onboarding title 3 description
   ///
   /// In en, this message translates to:
-  /// **'No more repeating flavors, rename configs, tests, icons, or boilerplate every new project.'**
+  /// **'Your reading progress is saved automatically so you can resume exactly where you stopped.'**
   String get onboardingDesc3;
 
   /// Label for onboarding title 4
   ///
   /// In en, this message translates to:
-  /// **'Build. Launch. Grow.'**
+  /// **'Save your favorites'**
   String get onboardingTitle4;
 
   /// Label for onboarding title 4 description
   ///
   /// In en, this message translates to:
-  /// **'Focus on solving real problems and shipping products faster with Startup Launch.'**
+  /// **'Build your personal manga library with favorites, history, and more features coming soon.'**
   String get onboardingDesc4;
 
   /// Label for library screen title
@@ -365,6 +365,60 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Back to Chapters'**
   String get backToChapters;
+
+  /// Greeting shown in the morning on home app bar
+  ///
+  /// In en, this message translates to:
+  /// **'Good Morning'**
+  String get goodMorning;
+
+  /// Greeting shown in the afternoon on home app bar
+  ///
+  /// In en, this message translates to:
+  /// **'Good Afternoon'**
+  String get goodAfternoon;
+
+  /// Greeting shown in the evening on home app bar
+  ///
+  /// In en, this message translates to:
+  /// **'Good Evening'**
+  String get goodEvening;
+
+  /// Greeting shown at night on home app bar
+  ///
+  /// In en, this message translates to:
+  /// **'Good Night'**
+  String get goodNight;
+
+  /// Home dynamic quote
+  ///
+  /// In en, this message translates to:
+  /// **'Ready for another chapter?'**
+  String get quote1;
+
+  /// Home dynamic quote
+  ///
+  /// In en, this message translates to:
+  /// **'Every page starts a new story.'**
+  String get quote2;
+
+  /// Home dynamic quote
+  ///
+  /// In en, this message translates to:
+  /// **'Continue where you left off.'**
+  String get quote3;
+
+  /// Home dynamic quote
+  ///
+  /// In en, this message translates to:
+  /// **'Adventure is one tap away.'**
+  String get quote4;
+
+  /// Home dynamic quote
+  ///
+  /// In en, this message translates to:
+  /// **'What will you read today?'**
+  String get quote5;
 }
 
 class _AppLocalizationsDelegate

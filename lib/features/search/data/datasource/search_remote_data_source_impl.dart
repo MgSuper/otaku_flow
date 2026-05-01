@@ -8,13 +8,15 @@ class SearchRemoteDataSourceImpl implements SearchRemoteDataSource {
   SearchRemoteDataSourceImpl(this.api);
 
   @override
-  Future<List<MangaModel>> search(String query) async {
+  Future<List<MangaModel>> search(String query, {int offset = 0}) async {
     final res = await api.get(
       '/manga',
       query: {
         'title': query,
         'limit': 20,
+        'offset': offset,
         'includes[]': ['cover_art'],
+        'contentRating[]': ['safe', 'suggestive'],
       },
     );
 

@@ -175,5 +175,41 @@
   "backToChapters": "Quay lại danh sách chương",
   "@backToChapters": {
     "description": "Button label to return to chapter list"
+  },
+  "goodMorning": "Chào buổi sáng",
+  "@goodMorning": {
+    "description": "Greeting shown in the morning on home app bar"
+  },
+  "goodAfternoon": "Chào buổi chiều",
+  "@goodAfternoon": {
+    "description": "Greeting shown in the afternoon on home app bar"
+  },
+  "goodEvening": "Chào buổi tối",
+  "@goodEvening": {
+    "description": "Greeting shown in the evening on home app bar"
+  },
+  "goodNight": "Chúc ngủ ngon",
+  "@goodNight": {
+    "description": "Greeting shown at night on home app bar"
+  },
+  "quote1": "Sẵn sàng cho chương tiếp theo chưa?",
+  "@quote1": {
+    "description": "Home dynamic quote"
+  },
+  "quote2": "Mỗi trang là một câu chuyện mới.",
+  "@quote2": {
+    "description": "Home dynamic quote"
+  },
+  "quote3": "Tiếp tục từ nơi bạn dừng lại.",
+  "@quote3": {
+    "description": "Home dynamic quote"
+  },
+  "quote4": "Phiêu lưu chỉ cách một chạm.",
+  "@quote4": {
+    "description": "Home dynamic quote"
+  },
+  "quote5": "Hôm nay bạn muốn đọc gì?",
+  "@quote5": {
+    "description": "Home dynamic quote"
   }
 }
