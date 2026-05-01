@@ -11,21 +11,10 @@ import 'package:startup_launch/features/home/presentation/widgets/dev_badge.dart
 import 'package:startup_launch/features/home/presentation/widgets/home_error.dart';
 import 'package:startup_launch/features/home/presentation/widgets/home_loading.dart';
 import 'package:startup_launch/features/home/presentation/widgets/home_section.dart';
-import 'package:startup_launch/features/manga/domain/entities/manga.dart';
 import 'package:startup_launch/features/reader/presentation/screens/widgets/continue_reading_card.dart';
 import 'package:startup_launch/features/reader_progress/presentation/cubit/reading_progress_cubit.dart';
 import 'package:startup_launch/features/reader_progress/presentation/cubit/reading_progress_state.dart';
 import 'package:startup_launch/l10n/generated/app_localizations.dart';
-
-const fakeManga = Manga(
-  id: '0',
-  title: 'Loading Manga Title',
-  description: 'Loading description',
-  status: 'ongoing',
-  year: 2026,
-  coverUrl: 'loading',
-  genres: ['Action'],
-);
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
@@ -36,6 +25,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        key: const Key('home_app_bar'),
         centerTitle: false,
         title: _PremiumGreetingHeader(),
         actions: [
