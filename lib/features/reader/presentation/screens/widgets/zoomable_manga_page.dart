@@ -77,11 +77,11 @@ class _ZoomableMangaPageState extends State<ZoomableMangaPage> {
           fit: BoxFit.fitWidth,
           memCacheWidth: (width * dpr * 2).toInt(),
           fadeInDuration: Duration.zero,
-          placeholder: (_, __) => AspectRatio(
+          placeholder: (_, _) => AspectRatio(
             aspectRatio: .7,
             child: ColoredBox(color: Colors.black12),
           ),
-          errorWidget: (_, __, ___) => const SizedBox(
+          errorWidget: (_, _, _) => const SizedBox(
             height: 220,
             child: Center(child: Icon(Icons.broken_image)),
           ),
