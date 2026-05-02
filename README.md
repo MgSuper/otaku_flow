@@ -94,9 +94,9 @@ Layers:
 | ------------------------------ | --------------------------------------- | ------------------------------------- | ---------------------------- |
 | ![Zoomable Double Click](screenshots/17.jpg) | ![Continue](screenshots/18.jpg) | ![Show Where](screenshots/19.jpg) | ![Add To Favorite](screenshots/20.jpg) |
 
-| Favorite                       |                       |                       |                       |
+| Favorite                       | To Align                      | To Align                      | To Align                      |
 | ------------------------------ | --------------------------------------- | ------------------------------------- | ---------------------------- |
-| ![Favorite](screenshots/21.jpg) | . | . | . |
+| ![Favorite](screenshots/21.jpg) |                         |                         |                         |
 
 ---
 
