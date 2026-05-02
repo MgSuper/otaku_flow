@@ -1,142 +1,272 @@
-![CI](https://github.com/MgSuper/startup_launch/actions/workflows/flutter_elite_ci.yml/badge.svg)
+# Otaku Flow
 
-# Startup Launch
-
-Launch production-ready Flutter startups in minutes.
-
-A powerful Flutter starter template built for speed, scalability, automation, and real product launches.
-
-Use this repository as a GitHub Template to create new startup apps instantly.
+A modern Flutter manga reader app built with clean architecture, BLoC state management, localization, theming, favorites, continue reading, and a premium reader experience powered by MangaDex API.
 
 ---
 
-# Why Startup Launch?
+## ✨ Features
 
-Most Flutter projects waste days rebuilding the same things:
-
-- routing
-- themes
-- localization
-- startup structure
-- flavors
-- CI/CD
-- onboarding
-- splash screen
-- testing
-
-Startup Launch solves it once — so you can focus on shipping products.
-
----
-
-# ⚡ Core Features
-
-## Architecture
-
-- Clean scalable structure
-- Feature-first architecture
-- Dependency Injection (`get_it`)
-- State Management (`flutter_bloc`)
-- Navigation (`go_router`)
-- Reusable core modules
-
-## UI System
-
-- Material 3
-- Light / Dark / System theme
-- Runtime theme switching
-- Responsive-ready foundation
-
-## Localization
-
-- English 🇺🇸
-- Vietnamese 🇻🇳
-- Japanese 🇯🇵
-- Thai 🇹🇭
-- Runtime language switching
-- Persistent selected language
-- Onboarding language selector
-
-## Launch Experience
-
-- Native Splash Screen
-- Dark mode splash support
-- First-launch onboarding flow
-- Skip onboarding after first run
-
-## Networking
-
-- `dio` API client
-- Auth interceptor ready
-- Connectivity guard ready
-- Refresh token ready
-- Error handling foundation
-
-## Productivity
-
-- Android flavors (`dev`, `staging`, `prod`)
-- iOS schemes (`dev`, `staging`, `prod`)
-- Environment banners
-- Different app icons per flavor
-- GitHub Template mode
-- One-command startup generator
-
-## Quality
-
-- GitHub Actions CI/CD
-- APK / AAB build artifacts
-- Release automation
-- Telegram notifications
-- Static analysis
-- Unit tests
-- Widget tests
-- Router tests
-- Coverage-ready CI
-- Strict lints
+- 📚 Browse manga collections:
+  - Trending
+  - Latest
+  - Popular
+- 🔎 Search manga
+- 📖 Manga detail page with summary + paginated chapter list
+- 📄 Reader screen with:
+  - Vertical reading
+  - Pinch zoom
+  - Double tap zoom
+  - Next / Previous chapter navigation
+- ❤️ Favorites system (local persistence)
+- ⏯ Continue Reading system
+- 🌍 Multi-language support:
+  - English
+  - Vietnamese
+  - Japanese
+  - Thai
+- 🌙 Dark mode / Light mode
+- ⚙ Settings screen
+- 🚀 Dev / Prod flavor support
+- 🧪 Widget tests + CI ready structure
 
 ---
 
-# Tech Stack
+## 🧱 Tech Stack
 
-Flutter • Dart • flutter_bloc • get_it • go_router • dio • shared_preferences
+- Flutter
+- Dart
+- flutter_bloc
+- go_router
+- get_it
+- dio
+- shared_preferences
+- cached_network_image
+- connectivity_plus
+- flutter_gen / intl
 
 ---
 
-# Quick Start
+## 🏗 Architecture
 
-## Use as Template
+Clean Architecture structure:
 
-Click **Use this template** on GitHub.
+```text
+lib/
+├── app/
+├── core/
+├── features/
+│   ├── home/
+│   ├── search/
+│   ├── manga_detail/
+│   ├── reader/
+│   ├── favorites/
+│   ├── reader_progress/
+│   └── settings/
+```
 
-## One-command Startup Setup
+Layers:
+
+- Presentation
+- Domain
+- Data
+
+---
+
+## 📱 Screenshots
+
+### Onboarding
+
+![Onboarding](screenshots/1.jpg)
+
+### Onboarding Change Language
+
+![Onboarding_Change_Language](screenshots/2.jpg)
+
+### First Load Main
+
+![First_Load](screenshots/3.jpg)
+
+### Main Screen
+
+![Main](screenshots/4.jpg)
+
+### Settings
+
+![Settings](screenshots/5.jpg)
+
+### Change Language Settings
+
+![Change_Language_Settings](screenshots/6.jpg)
+
+### Language Effect Whole App Immediately
+
+![Language_Effect](screenshots/7.jpg)
+
+### Search
+
+![Search](screenshots/8.jpg)
+
+### Search Loading
+
+![Search_Loading](screenshots/9.jpg)
+
+### Search Result
+
+![Search_Result](screenshots/10.jpg)
+
+### Detail
+
+![Detail](screenshots/11.jpg)
+
+### Detail Sliver
+
+![Detail_Sliver](screenshots/12.jpg)
+
+### Skeleton Page Change
+
+![Skeleton_Page_Change](screenshots/13.jpg)
+
+### Loaded
+
+![Loaded](screenshots/14.jpg)
+
+### Reader
+
+![Reader](screenshots/15.jpg)
+
+### Reader Scroll
+
+![Reader_Scroll](screenshots/16.jpg)
+
+### Zoomable Double Click
+
+![Zoomable_Double_Click](screenshots/17.jpg)
+
+### Continue
+
+![Continue](screenshots/118.jpg)
+
+### Show Where
+
+![Show_Where](screenshots/19.jpg)
+
+### Add To Favorite
+
+![Add_To_Favorite](screenshots/20.jpg)
+
+### Favorite
+
+![Favorite](screenshots/21.jpg)
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone Project
 
 ```bash
-sh scripts/create_startup.sh "My Startup" com.company.mystartup
-flutter run --flavor dev -t lib/main_dev.dart
+git clone <your-repo-url>
+cd otaku_flow
+```
+
+### 2. Install Dependencies
+
+```bash
+flutter pub get
+```
+
+### 3. Generate Localization
+
+```bash
+flutter gen-l10n
+```
+
+### 4. Run App
+
+```bash
+flutter run
 ```
 
 ---
 
-# Run Flavors
+## 🌐 API Source
 
-```bash
-flutter run --flavor dev -t lib/main_dev.dart
-flutter run --flavor staging -t lib/main_staging.dart
-flutter run --flavor prod -t lib/main_prod.dart
+This project uses:
+
+- MangaDex API
+
+Base URL:
+
+```text
+https://api.mangadex.org
 ```
 
 ---
 
-# Generate Flavor Icons
+## 🔥 Key Features Explained
 
-```bash
-dart run flutter_launcher_icons -f flutter_launcher_icons-dev.yaml
-dart run flutter_launcher_icons -f flutter_launcher_icons-staging.yaml
-dart run flutter_launcher_icons -f flutter_launcher_icons-prod.yaml
-```
+### Continue Reading
+
+Automatically saves:
+
+- Manga title
+- Cover image
+- Current chapter
+- Scroll position
+- Page progress
+
+Users can resume instantly from Home.
 
 ---
 
-# Run Tests
+### Favorites
+
+Users can:
+
+- Save manga locally
+- Remove favorites
+- Build personal library
+
+---
+
+### Reader Experience
+
+Includes:
+
+- Fast image caching
+- Premium zoom gestures
+- Chapter unavailable fallback flow
+- Previous / Next chapter controls
+
+---
+
+## 🌍 Localization
+
+Supported locales:
+
+- en
+- vi
+- ja
+- th
+
+ARB based translation system.
+
+---
+
+## ⚙ Flavors
+
+Supports environment configs:
+
+- DEV
+- PROD
+
+With custom launcher icons / splash assets.
+
+---
+
+## 🧪 Testing
+
+Run tests:
 
 ```bash
 flutter test
@@ -144,50 +274,45 @@ flutter test
 
 ---
 
-# Project Structure
+## 📦 Build Release
 
-```text
-lib/
-├── app/
-├── core/
-├── features/
-│   ├── onboarding/
-│   ├── home/
-│   └── settings/
-├── main_common.dart
-├── main_dev.dart
-├── main_staging.dart
-└── main_prod.dart
+Android:
+
+```bash
+flutter build apk --release
+```
+
+iOS:
+
+```bash
+flutter build ios --release
 ```
 
 ---
 
-# Built For
+## 📈 Future Ideas
 
-- startup MVPs
-- SaaS mobile apps
-- client projects
-- rapid idea validation
-- serious Flutter side projects
-
----
-
-# Roadmap
-
-- [ ] Firebase flavor setup
-- [ ] Supabase starter option
-- [ ] Fastlane deploy
-- [ ] Crashlytics integration
-- [ ] Analytics module
+- Offline downloads
+- User accounts / sync
+- Reading history screen
+- Notifications for updates
+- Custom reader themes
+- Smart recommendations
 
 ---
 
-# License
+## 🤝 Contributing
 
-MIT
+Pull requests welcome.
 
 ---
 
-# Support
+## 📄 License
 
-If Startup Launch helps you, give it a star.
+MIT License
+
+---
+
+## 👑 Built With Focus
+
+Designed for fast shipping, clean code, and real user experience.

@@ -16,7 +16,7 @@ class HomeRemoteDataSourceImpl implements HomeRemoteDataSource {
         'limit': 10,
         'order[followedCount]': 'desc',
         'includes[]': ['cover_art'],
-        'contentRating[]': ['safe', 'suggestive'],
+        'contentRating[]': ['safe'],
       },
     );
 
@@ -31,7 +31,7 @@ class HomeRemoteDataSourceImpl implements HomeRemoteDataSource {
         'limit': 10,
         'order[latestUploadedChapter]': 'desc',
         'includes[]': ['cover_art'],
-        'contentRating[]': ['safe', 'suggestive'],
+        'contentRating[]': ['safe'],
       },
     );
 
@@ -46,7 +46,7 @@ class HomeRemoteDataSourceImpl implements HomeRemoteDataSource {
         'limit': 10,
         'order[rating]': 'desc',
         'includes[]': ['cover_art'],
-        'contentRating[]': ['safe', 'suggestive'],
+        'contentRating[]': ['safe'],
       },
     );
 

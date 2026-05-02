@@ -16,7 +16,7 @@ class SearchRemoteDataSourceImpl implements SearchRemoteDataSource {
         'limit': 20,
         'offset': offset,
         'includes[]': ['cover_art'],
-        'contentRating[]': ['safe', 'suggestive'],
+        'contentRating[]': ['safe'],
       },
     );
 
