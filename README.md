@@ -74,89 +74,35 @@ Layers:
 
 ## 📱 Screenshots
 
-### Onboarding
+| Onboarding                                                | Onboarding Language | First Load Main | Main |
+| --------------------------------------------------------- | ------------------- | --------------- | ---- |
+| --------------------------------------------------------- |
 
-![Onboarding](screenshots/1.jpg)
+| ![Onboarding](screenshots/1.jpg) | ![Onboarding Change Language](screenshots/2.jpg) | ![Main Loading](screenshots/3.jpg) | ![Main](screenshots/4.jpg) |
 
-### Onboarding Change Language
+| Settings                                                  | Language Settings                       | Language Effect                       | Search                       |
+| --------------------------------------------------------- | --------------------------------------- | ------------------------------------- | ---------------------------- |
+| --------------------------------------------------------- |
+| ![Settings](screenshots/5.jpg)                            | ![Language Settings](screenshots/6.jpg) | ![Language Effect](screenshots/7.jpg) | ![Search](screenshots/8.jpg) |
 
-![Onboarding_Change_Language](screenshots/2.jpg)
+| Search Loading                                            | Search Result                        | Detail                        | Detail Sliver                        |
+| --------------------------------------------------------- | ------------------------------------ | ----------------------------- | ------------------------------------ |
+| --------------------------------------------------------- |
+| ![Search Loading](screenshots/9.jpg)                      | ![Search Result](screenshots/10.jpg) | ![Detail](screenshots/11.jpg) | ![Detail Sliver](screenshots/12.jpg) |
 
-### First Load Main
+| Skeleton Page Change                                      | Loaded                        | Reader                        | Reader Scroll                        |
+| --------------------------------------------------------- | ----------------------------- | ----------------------------- | ------------------------------------ |
+| --------------------------------------------------------- |
+| ![Skeleton Page Change](screenshots/13.jpg)               | ![Loaded](screenshots/14.jpg) | ![Reader](screenshots/15.jpg) | ![Reader Scroll](screenshots/16.jpg) |
 
-![First_Load](screenshots/3.jpg)
+| Zoomable Double Click                                     | Continue                        | Show Where                        | Add To Favorite                        |
+| --------------------------------------------------------- | ------------------------------- | --------------------------------- | -------------------------------------- |
+| --------------------------------------------------------- |
+| ![Zoomable Double Click](screenshots/17.jpg)              | ![Continue](screenshots/18.jpg) | ![Show Where](screenshots/19.jpg) | ![Add To Favorite](screenshots/20.jpg) |
 
-### Main Screen
-
-![Main](screenshots/4.jpg)
-
-### Settings
-
-![Settings](screenshots/5.jpg)
-
-### Change Language Settings
-
-![Change_Language_Settings](screenshots/6.jpg)
-
-### Language Effect Whole App Immediately
-
-![Language_Effect](screenshots/7.jpg)
-
-### Search
-
-![Search](screenshots/8.jpg)
-
-### Search Loading
-
-![Search_Loading](screenshots/9.jpg)
-
-### Search Result
-
-![Search_Result](screenshots/10.jpg)
-
-### Detail
-
-![Detail](screenshots/11.jpg)
-
-### Detail Sliver
-
-![Detail_Sliver](screenshots/12.jpg)
-
-### Skeleton Page Change
-
-![Skeleton_Page_Change](screenshots/13.jpg)
-
-### Loaded
-
-![Loaded](screenshots/14.jpg)
-
-### Reader
-
-![Reader](screenshots/15.jpg)
-
-### Reader Scroll
-
-![Reader_Scroll](screenshots/16.jpg)
-
-### Zoomable Double Click
-
-![Zoomable_Double_Click](screenshots/17.jpg)
-
-### Continue
-
-![Continue](screenshots/118.jpg)
-
-### Show Where
-
-![Show_Where](screenshots/19.jpg)
-
-### Add To Favorite
-
-![Add_To_Favorite](screenshots/20.jpg)
-
-### Favorite
-
-![Favorite](screenshots/21.jpg)
+| Favorite                        |
+| ------------------------------- |
+| ![Favorite](screenshots/21.jpg) |
 
 ---
 
