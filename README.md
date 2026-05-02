@@ -74,9 +74,9 @@ Layers:
 
 ## 📱 Screenshots
 
-| Onboarding                             | Onboarding Language                                     | Main Loading                                    | Main                                    |
-| ------------------------------ | --------------------------------------- | ------------------------------------- | ---------------------------- |
-
+| Onboarding                       | Onboarding Language                       | Main Loading                       | Main                       |
+| --------------------------------------------------------- | ------------------------------- | --------------------------------- | -------------------------------------- |
+| --------------------------------------------------------- |
 | ![Onboarding](screenshots/1.jpg) | ![Onboarding Language](screenshots/2.jpg) | ![Main Loading](screenshots/3.jpg) | ![Main](screenshots/4.jpg) |
 
 | Settings                       | Language Settings                       | Language Effect                       | Search                       |
