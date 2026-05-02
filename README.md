@@ -74,35 +74,24 @@ Layers:
 
 ## 📱 Screenshots
 
-| Onboarding                                                | Onboarding Language | First Load Main | Main |
-| --------------------------------------------------------- | ------------------- | --------------- | ---- |
-| --------------------------------------------------------- |
-
+| Onboarding | Onboarding Language | First Load Main | Main |
 | ![Onboarding](screenshots/1.jpg) | ![Onboarding Change Language](screenshots/2.jpg) | ![Main Loading](screenshots/3.jpg) | ![Main](screenshots/4.jpg) |
 
-| Settings                                                  | Language Settings                       | Language Effect                       | Search                       |
-| --------------------------------------------------------- | --------------------------------------- | ------------------------------------- | ---------------------------- |
-| --------------------------------------------------------- |
-| ![Settings](screenshots/5.jpg)                            | ![Language Settings](screenshots/6.jpg) | ![Language Effect](screenshots/7.jpg) | ![Search](screenshots/8.jpg) |
+| Settings | Language Settings | Language Effect | Search |
+| ![Settings](screenshots/5.jpg) | ![Language Settings](screenshots/6.jpg) | ![Language Effect](screenshots/7.jpg) | ![Search](screenshots/8.jpg) |
 
-| Search Loading                                            | Search Result                        | Detail                        | Detail Sliver                        |
-| --------------------------------------------------------- | ------------------------------------ | ----------------------------- | ------------------------------------ |
-| --------------------------------------------------------- |
-| ![Search Loading](screenshots/9.jpg)                      | ![Search Result](screenshots/10.jpg) | ![Detail](screenshots/11.jpg) | ![Detail Sliver](screenshots/12.jpg) |
+| Search Loading | Search Result | Detail | Detail Sliver |
+| ![Search Loading](screenshots/9.jpg) | ![Search Result](screenshots/10.jpg) | ![Detail](screenshots/11.jpg) | ![Detail Sliver](screenshots/12.jpg) |
 
-| Skeleton Page Change                                      | Loaded                        | Reader                        | Reader Scroll                        |
-| --------------------------------------------------------- | ----------------------------- | ----------------------------- | ------------------------------------ |
-| --------------------------------------------------------- |
-| ![Skeleton Page Change](screenshots/13.jpg)               | ![Loaded](screenshots/14.jpg) | ![Reader](screenshots/15.jpg) | ![Reader Scroll](screenshots/16.jpg) |
+| Skeleton Page Change | Loaded | Reader | Reader Scroll |
+| ![Skeleton Page Change](screenshots/13.jpg) | ![Loaded](screenshots/14.jpg) | ![Reader](screenshots/15.jpg) | ![Reader Scroll](screenshots/16.jpg) |
 
-| Zoomable Double Click                                     | Continue                        | Show Where                        | Add To Favorite                        |
-| --------------------------------------------------------- | ------------------------------- | --------------------------------- | -------------------------------------- |
-| --------------------------------------------------------- |
-| ![Zoomable Double Click](screenshots/17.jpg)              | ![Continue](screenshots/18.jpg) | ![Show Where](screenshots/19.jpg) | ![Add To Favorite](screenshots/20.jpg) |
+| Zoomable Double Click | Continue | Show Where | Add To Favorite |
+| ![Zoomable Double Click](screenshots/17.jpg) | ![Continue](screenshots/18.jpg) | ![Show Where](screenshots/19.jpg) | ![Add To Favorite](screenshots/20.jpg) |
 
-| Favorite                        |
-| ------------------------------- |
-| ![Favorite](screenshots/21.jpg) |
+| Favorite | | | |
+
+| ![Favorite](screenshots/21.jpg) | | | |
 
 ---
 
