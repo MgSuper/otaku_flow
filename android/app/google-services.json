@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "674288606251",
+    "project_id": "otakuflow-f7f71",
+    "storage_bucket": "otakuflow-f7f71.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:674288606251:android:a6f9599e4ff527f940de6e",
+        "android_client_info": {
+          "package_name": "com.sptrl.otaku_flow"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEH6QqrpNtf6btEc-dJnqNVVdT5KIDp9U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
