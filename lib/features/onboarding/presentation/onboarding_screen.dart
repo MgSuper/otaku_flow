@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:startup_launch/app/localization/locale_cubit.dart';
 import 'package:startup_launch/app/routes/app_routes.dart';
 import 'package:startup_launch/core/extensions/l10n.dart';
+import 'package:startup_launch/core/telemetry/telemetry.dart';
 import 'package:startup_launch/features/onboarding/presentation/cubit/onboarding_cubit.dart';
 import 'package:startup_launch/features/onboarding/presentation/cubit/onboarding_state.dart';
 import 'package:startup_launch/features/onboarding/presentation/typewriter_text.dart';
@@ -32,6 +33,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
   Future<void> _finish(BuildContext context) async {
     await context.read<OnboardingCubit>().complete();
+    if (!context.mounted) return;
+    await Telemetry.logEvent('onboarding_completed');
     if (!context.mounted) return;
     context.go(AppRoutes.home);
   }
@@ -191,6 +194,10 @@ class _LanguageDropdown extends StatelessWidget {
               icon: const Icon(Icons.keyboard_arrow_down),
               onChanged: (value) {
                 if (value != null) {
+                  Telemetry.logEvent(
+                    'language_changed',
+                    parameters: {'language': value},
+                  );
                   context.read<LocaleCubit>().change(value);
                 }
               },

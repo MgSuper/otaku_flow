@@ -1,4 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:startup_launch/core/telemetry/telemetry.dart';
 import 'package:startup_launch/features/reader/domain/usecases/get_reader_chapter_usecase.dart';
 import 'package:startup_launch/features/reader/presentation/bloc/reader_event.dart';
 import 'package:startup_launch/features/reader/presentation/bloc/reader_state.dart';
@@ -38,7 +39,12 @@ class ReaderBloc extends Bloc<ReaderEvent, ReaderState> {
           hasPrevPage: event.hasPrevPage, // Pass from event
         ),
       );
-    } catch (e) {
+    } catch (e, stack) {
+      await Telemetry.recordError(
+        e,
+        stack,
+        reason: 'Reader chapter load failed',
+      );
       emit(
         ReaderError(e.toString(), chapters: event.chapters, index: event.index),
       );

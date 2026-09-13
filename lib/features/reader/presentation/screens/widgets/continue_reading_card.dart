@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:startup_launch/core/di/service_locator.dart';
+import 'package:startup_launch/core/telemetry/telemetry.dart';
 import 'package:startup_launch/features/manga_detail/domain/entities/manga_detail.dart';
 import 'package:startup_launch/features/manga_detail/domain/usecases/get_manga_detail_usecase.dart';
 import 'package:startup_launch/features/reader_progress/domain/entities/reading_progress.dart';
@@ -23,6 +24,7 @@ class ContinueReadingCard extends StatelessWidget {
         subtitle: Text(progress.chapterTitle),
         trailing: const Icon(Icons.play_arrow),
         onTap: () async {
+          await Telemetry.logEvent('continue_reading_started');
           try {
             // 1. Fetch the data using the PAGE stored in progress
             // Note: If your progress doesn't have .page yet, you'll need to add it
@@ -69,8 +71,13 @@ class ContinueReadingCard extends StatelessWidget {
                 },
               );
             }
-          } catch (e) {
+          } catch (e, stack) {
             debugPrint('Error loading continue reading context: $e');
+            await Telemetry.recordError(
+              e,
+              stack,
+              reason: 'Continue-reading context load failed',
+            );
             if (context.mounted) {
               context.push(
                 '/reader/${progress.chapterId}',

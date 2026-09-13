@@ -1,4 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:startup_launch/core/telemetry/telemetry.dart';
 import 'package:startup_launch/features/onboarding/data/onboarding_storage.dart';
 import 'package:startup_launch/features/onboarding/presentation/cubit/onboarding_state.dart';
 
@@ -17,7 +18,16 @@ class OnboardingCubit extends Cubit<OnboardingState> {
     if (state.isSubmitting) return;
 
     emit(state.copyWith(isSubmitting: true));
-    await _storage.setCompleted();
+    try {
+      await _storage.setCompleted();
+    } catch (e, stack) {
+      await Telemetry.recordError(
+        e,
+        stack,
+        reason: 'Onboarding completion could not be persisted',
+      );
+      rethrow;
+    }
     emit(state.copyWith(isSubmitting: false));
   }
 }

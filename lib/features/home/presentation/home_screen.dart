@@ -4,6 +4,7 @@ import 'package:go_router/go_router.dart';
 import 'package:startup_launch/core/config/app_config.dart';
 import 'package:startup_launch/core/di/service_locator.dart';
 import 'package:startup_launch/core/extensions/l10n.dart';
+import 'package:startup_launch/core/telemetry/telemetry.dart';
 import 'package:startup_launch/features/home/presentation/bloc/home_bloc.dart';
 import 'package:startup_launch/features/home/presentation/bloc/home_event.dart';
 import 'package:startup_launch/features/home/presentation/bloc/home_state.dart';
@@ -33,12 +34,20 @@ class HomeScreen extends StatelessWidget {
             DevBadge(label: config.bannerLabel, color: config.bannerColor),
           IconButton(
             onPressed: () {
+              Telemetry.logEvent(
+                'search_opened',
+                parameters: {'source': 'home'},
+              );
               context.push('/search');
             },
             icon: Icon(Icons.search),
           ),
           IconButton(
             onPressed: () {
+              Telemetry.logEvent(
+                'settings_opened',
+                parameters: {'source': 'home'},
+              );
               context.push('/settings');
             },
             icon: Icon(Icons.settings),
@@ -114,6 +123,7 @@ class HomeScreen extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.favorite_outline),
         onPressed: () {
+          Telemetry.logEvent('library_opened', parameters: {'source': 'home'});
           context.push('/library');
         },
       ),

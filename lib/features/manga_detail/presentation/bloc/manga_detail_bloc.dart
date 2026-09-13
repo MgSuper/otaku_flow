@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:startup_launch/core/telemetry/telemetry.dart';
 import 'package:startup_launch/features/manga_detail/domain/usecases/get_manga_detail_usecase.dart';
 import 'package:startup_launch/features/manga_detail/presentation/bloc/manga_detail_event.dart';
 import 'package:startup_launch/features/manga_detail/presentation/bloc/manga_detail_state.dart';
@@ -54,8 +55,9 @@ class MangaDetailBloc extends Bloc<MangaDetailEvent, MangaDetailState> {
           }),
         );
       }
-    } catch (e) {
+    } catch (e, stack) {
       debugPrint('[MangaDetailBloc] Error in _load: $e');
+      await Telemetry.recordError(e, stack, reason: 'Manga detail load failed');
       emit(MangaDetailError('Failed to load manga details'));
     }
   }
@@ -83,7 +85,12 @@ class MangaDetailBloc extends Bloc<MangaDetailEvent, MangaDetailState> {
       if (event.page < result.totalPages) {
         unawaited(getDetail(mangaId: _mangaId, page: event.page + 1));
       }
-    } catch (e) {
+    } catch (e, stack) {
+      await Telemetry.recordError(
+        e,
+        stack,
+        reason: 'Manga chapter page load failed',
+      );
       emit(current.copyWith(loadingChapters: false));
     }
   }

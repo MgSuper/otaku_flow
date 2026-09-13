@@ -3,10 +3,14 @@ platform :osx, '10.15'
 # CocoaPods analytics sends network stats synchronously affecting flutter build latency.
 ENV['COCOAPODS_DISABLE_STATS'] = 'true'
 
+# Map custom flavor configurations so CocoaPods recognizes them correctly
 project 'Runner', {
   'Debug' => :debug,
+  'Debug-dev' => :debug,
   'Profile' => :release,
+  'Profile-dev' => :release,
   'Release' => :release,
+  'Release-dev' => :release,
 }
 
 def flutter_root
@@ -38,5 +42,9 @@ end
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     flutter_additional_macos_build_settings(target)
+    # Ensure all native Pod dependencies inherit macOS 10.15 minimum version
+    target.build_configurations.each do |config|
+      config.build_settings['MACOSX_DEPLOYMENT_TARGET'] = '10.15'
+    end
   end
 end

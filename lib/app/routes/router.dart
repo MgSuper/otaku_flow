@@ -1,3 +1,6 @@
+import 'package:firebase_analytics/firebase_analytics.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -21,11 +24,20 @@ import 'package:startup_launch/features/search/presentation/screens/search_scree
 import 'package:startup_launch/features/settings/presentation/screens/settings_screen.dart';
 
 final RouteObserver<PageRoute> routeObserver = RouteObserver<PageRoute>();
+final List<NavigatorObserver> _appObservers = [
+  routeObserver,
+  if ((kIsWeb ||
+          defaultTargetPlatform == TargetPlatform.android ||
+          defaultTargetPlatform == TargetPlatform.iOS ||
+          defaultTargetPlatform == TargetPlatform.macOS) &&
+      Firebase.apps.isNotEmpty)
+    FirebaseAnalyticsObserver(analytics: FirebaseAnalytics.instance),
+];
 
 class AppRouter {
   static GoRouter createRouter({required bool showOnboardingFirst}) {
     return GoRouter(
-      observers: [routeObserver],
+      observers: _appObservers,
       initialLocation: showOnboardingFirst
           ? AppRoutes.onboarding
           : AppRoutes.home,

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:startup_launch/core/extensions/l10n.dart';
+import 'package:startup_launch/core/telemetry/telemetry.dart';
 import 'package:startup_launch/features/search/presentation/bloc/search_bloc.dart';
 import 'package:startup_launch/features/search/presentation/bloc/search_event.dart';
 import 'package:startup_launch/features/search/presentation/bloc/search_state.dart';
@@ -63,6 +64,7 @@ class _SearchScreenState extends State<SearchScreen> {
                   icon: const Icon(Icons.clear),
                   onPressed: () {
                     _controller.clear(); // Clears the UI
+                    Telemetry.logEvent('search_cleared');
                     context.read<SearchBloc>().add(
                       SearchCleared(),
                     ); // Clears the Bloc state
@@ -104,12 +106,22 @@ class _SearchScreenState extends State<SearchScreen> {
                                         color: Colors.white.withAlpha(2),
                                       ),
                                     ),
-                                    onPressed: () => context
-                                        .read<SearchBloc>()
-                                        .add(SearchSubmitted(query)),
-                                    onDeleted: () => context
-                                        .read<SearchBloc>()
-                                        .add(DeleteSearchHistory(query)),
+                                    onPressed: () {
+                                      Telemetry.logEvent(
+                                        'search_history_selected',
+                                      );
+                                      context.read<SearchBloc>().add(
+                                        SearchSubmitted(query),
+                                      );
+                                    },
+                                    onDeleted: () {
+                                      Telemetry.logEvent(
+                                        'search_history_deleted',
+                                      );
+                                      context.read<SearchBloc>().add(
+                                        DeleteSearchHistory(query),
+                                      );
+                                    },
                                   ),
                                 )
                                 .toList(),
