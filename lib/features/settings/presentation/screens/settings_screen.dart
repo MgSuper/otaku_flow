@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:startup_launch/app/localization/locale_cubit.dart';
 import 'package:startup_launch/app/theme/theme_cubit.dart';
 import 'package:startup_launch/core/extensions/l10n.dart';
+import 'package:startup_launch/core/telemetry/telemetry.dart';
 
 class SettingsPage extends StatelessWidget {
   const SettingsPage({super.key});
@@ -140,19 +141,37 @@ class ThemeSelector extends StatelessWidget {
                 icon: Icons.light_mode,
                 label: context.l10n.light,
                 isSelected: mode == ThemeMode.light,
-                onTap: () => context.read<ThemeCubit>().setLight(),
+                onTap: () {
+                  Telemetry.logEvent(
+                    'theme_changed',
+                    parameters: {'theme': 'light'},
+                  );
+                  context.read<ThemeCubit>().setLight();
+                },
               ),
               _ThemeOption(
                 icon: Icons.dark_mode,
                 label: context.l10n.dark,
                 isSelected: mode == ThemeMode.dark,
-                onTap: () => context.read<ThemeCubit>().setDark(),
+                onTap: () {
+                  Telemetry.logEvent(
+                    'theme_changed',
+                    parameters: {'theme': 'dark'},
+                  );
+                  context.read<ThemeCubit>().setDark();
+                },
               ),
               _ThemeOption(
                 icon: Icons.settings_brightness,
                 label: context.l10n.auto,
                 isSelected: mode == ThemeMode.system,
-                onTap: () => context.read<ThemeCubit>().setSystem(),
+                onTap: () {
+                  Telemetry.logEvent(
+                    'theme_changed',
+                    parameters: {'theme': 'system'},
+                  );
+                  context.read<ThemeCubit>().setSystem();
+                },
               ),
             ],
           ),

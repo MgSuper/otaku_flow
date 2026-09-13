@@ -1,4 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:startup_launch/core/telemetry/telemetry.dart';
 import 'package:startup_launch/features/search/data/datasource/onboarding_storage.dart';
 import 'package:startup_launch/features/search/domain/usecases/search_manga_usecase.dart';
 import 'package:stream_transform/stream_transform.dart';
@@ -51,6 +52,10 @@ class SearchBloc extends Bloc<SearchEvent, SearchState> {
     }
 
     emit(SearchLoading());
+    await Telemetry.logEvent(
+      'search_submitted',
+      parameters: {'query_length': q.length},
+    );
 
     try {
       final result = await searchManga(q, offset: 0);
@@ -64,7 +69,8 @@ class SearchBloc extends Bloc<SearchEvent, SearchState> {
           SearchLoaded(query: q, mangas: result, hasMore: result.length == 20),
         );
       }
-    } catch (e) {
+    } catch (e, stack) {
+      await Telemetry.recordError(e, stack, reason: 'Search request failed');
       emit(SearchError(e.toString()));
     }
   }
@@ -98,7 +104,12 @@ class SearchBloc extends Bloc<SearchEvent, SearchState> {
           loadingMore: false,
         ),
       );
-    } catch (_) {
+    } catch (e, stack) {
+      await Telemetry.recordError(
+        e,
+        stack,
+        reason: 'Loading more search results failed',
+      );
       emit(current.copyWith(loadingMore: false));
     }
   }
