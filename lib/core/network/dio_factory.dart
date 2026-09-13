@@ -14,6 +14,8 @@ class DioFactory {
         headers: {
           'Accept': 'application/json',
           'Content-Type': 'application/json',
+          'User-Agent':
+              'OtakuFlow/1.0.0 (https://github.com/MgSuper/otaku_flow)',
         },
       ),
     );
